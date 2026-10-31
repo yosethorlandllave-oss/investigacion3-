@@ -127,6 +127,26 @@ Para cada clase k, TP_k representa verdaderos positivos; FP_k, falsos positivos;
 | Aleatoriedad | Variación entre ejecuciones. | Fijar y registrar semillas; decidir antes de evaluar si se realizarán repeticiones y cómo se resumirán. | Ficha de ejecución. |
 | Recursos y versiones | Restricciones en la configuración o reproducibilidad. | Registrar hardware y versiones. No se plantea eficiencia computacional como resultado principal adicional. | Ficha técnica. |
 
+### Definiciones e indicadores de las condiciones de control
+
+Las siguientes definiciones son propuestas operacionales del proyecto que desarrollan las condiciones descritas en el Documento 2. Su función es documentar el contexto de la comparación; no introducen hipótesis causales adicionales.
+
+| Condición y dimensión | Definición conceptual | Definición operacional e indicador | Escala o unidad | Fuente o instrumento previsto |
+|---|---|---|---|---|
+| Corpus: cobertura | Conjunto de comentarios que cumplen la delimitación temática y de procedencia. | Registrar fuente, fechas inicial y final y número de comentarios incluidos tras depuración. | Fuente: nominal; fechas: calendario; cantidad: razón, comentarios. | Ficha del corpus y registro de inclusión. |
+| Etiquetado: consistencia | Grado de coincidencia en la asignación de categorías conforme a la guía. | En el subconjunto revisado independientemente, contar coincidencias y desacuerdos antes de resolverlos; registrar número revisado y proporción de coincidencias. Si no hay revisión independiente, consignar que no se estimó concordancia. | Etiquetas: nominal; recuentos: razón; coincidencia: proporción entre 0 y 1. | Guía de anotación y registro de decisiones de los revisores. |
+| Ambigüedad: interpretación | Presencia de comentarios cuya categoría no se determina de forma unívoca mediante la guía. | Marcar los casos que requieren revisión y documentar su resolución; contar casos marcados sin equipararlos automáticamente a errores del modelo. | Marca: nominal; cantidad: razón. | Registro de anotación y revisión de casos. |
+| Partición: asignación | Distribución de los comentarios entre entrenamiento, validación y prueba. | Registrar subconjunto por identificador y número de comentarios en cada uno; conservar la misma asignación para ambos enfoques. | Subconjunto: nominal; cantidad: razón. | Manifiesto de partición. |
+| Duplicación: repetición textual | Presencia de textos idénticos o casi idénticos según el criterio de depuración definido. | Registrar grupos detectados y comprobar su asignación a un único subconjunto. Documentar criterio y método de detección. | Identificador de grupo: nominal; recuento de cruces entre subconjuntos: razón. | Registro de deduplicación y manifiesto de partición. |
+| Clases: distribución | Frecuencia relativa de las categorías de sentimiento en el corpus. | Calcular n_k y n_k/N por clase y subconjunto. | Clase: nominal; soporte: razón, comentarios; proporción: 0 a 1. | Etiquetas de referencia y tabla de distribución. |
+| Lenguaje: expresiones coloquiales | Uso de expresiones locales o informales que pueden requerir interpretación contextual. | Durante el análisis de errores, registrar casos identificados con criterios explícitos y fragmentos desidentificados. No estimar prevalencia general a partir de una selección de errores. | Categoría descriptiva: nominal; recuento en la selección revisada: razón. | Ficha de análisis de errores. |
+| Preprocesamiento: transformación | Operaciones que convierten el texto en la entrada de cada modelo. | Registrar reglas de limpieza, vectorizador o tokenizador y subconjunto usado para ajustar componentes aprendidos. | Reglas, componente y subconjunto: nominal. | Configuración del procedimiento. |
+| Ajuste: presupuesto | Recursos y oportunidades de búsqueda asignados a la selección de configuraciones. | Registrar número de configuraciones evaluadas y criterio de selección; documentar parámetros propios de cada enfoque. | Número de configuraciones: razón; criterio: nominal; parámetros: escala según su definición. | Registro de experimentos y validación. |
+| Aleatoriedad: ejecuciones | Variación inducida por procesos aleatorios del procedimiento. | Registrar semilla por ejecución y número de repeticiones; la semilla actúa como identificador, no como magnitud de desempeño. | Semilla: identificador nominal; repeticiones: razón. | Ficha de ejecución. |
+| Entorno: reproducibilidad | Condiciones de software y hardware bajo las que se ejecuta cada modelo. | Registrar versiones, CPU/GPU y memoria disponible. | Versiones y modelos de equipo: nominal; memoria: razón, GB. | Ficha técnica del entorno. |
+
+La proporción de coincidencias entre anotadores es descriptiva y no corrige el acuerdo por azar. No se interpretará como una validación completa de las etiquetas. Las condiciones descritas se registrarán antes o durante la ejecución según corresponda; en esta sesión se especifican los instrumentos, no sus valores.
+
 ## E7. Matriz de consistencia
 
 **Pregunta común:** ¿qué diferencias de desempeño, medidas principalmente mediante macro-F1, presentan TF-IDF + SVM y un Transformer en español en comentarios ciudadanos sobre limpieza pública y recojo de residuos en Juliaca?

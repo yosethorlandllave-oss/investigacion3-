@@ -35,3 +35,7 @@ La fuente y el periodo del corpus, las clases, el Transformer concreto, las part
 ## Revisión de consistencia
 
 Se comprobaron la presencia de E1–E8, la correspondencia de los cuatro objetivos con la matriz, la dirección Transformer menos SVM de la diferencia, la separación entre etiqueta objetivo y variables del estudio, y la declaración de decisiones pendientes. Estas comprobaciones documentales no validan aún el desempeño de los modelos ni las publicaciones originales.
+
+## Correspondencia con la consigna
+
+Consultar la [revisión de requisitos de la actividad](revision_actividad.md). La sección E6 incluye definiciones, indicadores, escalas e instrumentos para las variables principales y las condiciones de control.
