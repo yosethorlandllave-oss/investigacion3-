@@ -151,8 +151,4 @@ Los códigos sirven como enlaces entre las evidencias; el orden es metodológico
 
 Las fuentes bibliométricas están en [criterios_calidad.md](evidencias/busqueda/criterios_calidad.md). Los candidatos no incluidos están en el registro de búsqueda y no se contabilizan como estudios sintetizados. Las fuentes originales sustituyen la atribución indirecta a los borradores para los trabajos aquí verificados.
 
-## Integración posterior y control de versiones
 
-E8 es el texto base para incorporar al PPI; E1–E7 respaldan su trazabilidad y E9 su bibliografía. Antes de presentar el documento como RSL final se completarán las búsquedas nativas pendientes, el cribado independiente y la actualización del corpus. La delimitación definitiva de los datos locales se resolverá en el protocolo del estudio.
-
-El avance se registra en commits separados para búsqueda y calidad, matriz de síntesis, taxonomía y redacción. El historial Git conserva las versiones progresivas sin presentar como ejecutado el experimento futuro.
