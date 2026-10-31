@@ -28,13 +28,13 @@ Ventana: publicaciones de 2022 a 2026 inclusive, anteriores al corte; excepción
 
 ## Ejecución comprobable
 
-El archivo [consultas_ejecutadas.json](consultas_ejecutadas.json) conserva las consultas literales B01–B11 y sus filtros de dominio. Los años incluidos en una consulta fueron términos de búsqueda, no filtros nativos garantizados. B01–B03 localizaron modelos, survey y seminales; B04–B07 contrastaron índices y venues; B08–B10 verificaron detalles metodológicos; B11 amplió dominio, ubicación y citación hacia adelante.
+El archivo [consultas_ejecutadas.json](consultas_ejecutadas.json) conserva las consultas literales B01–B11 y sus filtros de dominio. Las verificaciones adicionales se registran en [consultas_complementarias.json](consultas_complementarias.json). Los años incluidos en una consulta fueron términos de búsqueda, no filtros nativos garantizados. B01–B03 localizaron modelos, survey y seminales; B04–B07 contrastaron índices y venues; B08–B10 verificaron detalles metodológicos; B11 amplió dominio, ubicación y citación hacia adelante.
 
 | Recurso / vía | Uso realizado | Resultado y límite |
 |---|---|---|
 | Buscador web con consultas generales y por dominio | Descubrimiento y recuperación de páginas académicas | Registro de consultas; sin total global fiable ni exportación exhaustiva. |
 | ACL Anthology | Metadatos y PDF de P01–P04 | Fuentes primarias consultadas. |
-| SEPLN y repositorio UPC | P05 | PDF leído desde el repositorio institucional; descarga editorial directa fallida. |
+| SEPLN y repositorio UPC | P05 | PDF leído desde [UPC](https://upcommons.upc.edu/server/api/core/bitstreams/f148874b-48d6-4fdf-97e2-56a8e8b091c1/content); descarga editorial directa fallida. |
 | MDPI / Europe PMC | P06 | Texto completo editorial y XML del repositorio. |
 | Springer / página editorial | P07 | Texto del survey y referencias. |
 | PMC / ScienceDirect | P08 | Texto primario consultado; algunos accesos posteriores mostraron controles de acceso. |

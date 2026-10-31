@@ -1,33 +1,15 @@
 # Evidencias — U3 Sesión 3
 
-Esta carpeta contiene los archivos complementarios utilizados para construir
-el estado del arte.
+El [desarrollo principal](../desarrollo.md) reúne E1–E9 y el borrador para el PPI. Los archivos siguientes permiten comprobar y actualizar la revisión.
 
-## Evidencias sugeridas
+| Evidencia | Archivo |
+|---|---|
+| E1: estrategia, registro, snowballing y candidatos | [busqueda/estrategia_registro.md](busqueda/estrategia_registro.md) |
+| E1: consultas literales ejecutadas | [busqueda/consultas_ejecutadas.json](busqueda/consultas_ejecutadas.json) y [consultas_complementarias.json](busqueda/consultas_complementarias.json) |
+| E1: incidencia de acceso DBLP | [busqueda/dblp_robertuito.json](busqueda/dblp_robertuito.json) |
+| E2 y E4: criterios, venues, seminales y survey | [busqueda/criterios_calidad.md](busqueda/criterios_calidad.md) |
+| E3 y E6: extracción y lectura crítica de 11 artículos | [matrices/matriz_sintesis.md](matrices/matriz_sintesis.md) |
+| E5: taxonomía, evolución y citas verificadas | [mapas/taxonomia.md](mapas/taxonomia.md) |
+| E7–E9: brecha, redacción y referencias | [desarrollo.md](../desarrollo.md) |
 
-- exportación de resultados de las bases de datos consultadas;
-- registro de cadenas, filtros y fechas de búsqueda;
-- hoja de cálculo con la matriz de síntesis;
-- comprobantes de ranking CORE o cuartil SJR;
-- fichas de lectura de los artículos;
-- grafo generado con Connected Papers, Litmaps o ResearchRabbit;
-- taxonomía o mapa de la literatura;
-- diagramas de evolución de métodos;
-- extractos que sustenten limitaciones y problemas abiertos;
-- versiones progresivas del borrador del estado del arte.
-
-## Organización recomendada
-
-```text
-evidencias/
-├── busqueda/
-├── fichas/
-├── matrices/
-└── mapas/
-```
-
-Cada archivo debe tener un nombre descriptivo y mantener correspondencia con
-las referencias registradas en `desarrollo.md`.
-
-No se deben almacenar copias de artículos cuya licencia prohíba su
-redistribución. En esos casos, registrar la referencia, DOI o URL de acceso.
+**Corte:** 31/10/2026. Nueve de once publicaciones son de 2022–2026. Los artículos completos de terceros no se redistribuyen: se conservan enlaces primarios y localizadores. Las síntesis y matrices son elaboración propia. No hay exportaciones nativas de bases que no pudieron consultarse, ni experimentos o artefactos científicos ejecutados en esta sesión.
