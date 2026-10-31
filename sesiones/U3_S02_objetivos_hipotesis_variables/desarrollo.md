@@ -1,206 +1,42 @@
-# Desarrollo — U3 Sesión 2
+# Desarrollo — U3 Sesión 2: Objetivos, hipótesis y variables
 
-## E1. Revisión de la pregunta de investigación
+**Autor:** Yoseth Orlando Llave Huachaca
 
-### Brecha de investigación identificada
+**Curso:** Investigación III — Universidad Peruana Unión
 
-[Resumir la brecha identificada en la sesión anterior.]
+**Fecha:** 31 de octubre de 2026
 
-### Pregunta de investigación
+**Estado:** propuesta metodológica para incorporación posterior al PPI; sin ejecución experimental.
 
-¿...?
+Este avance continúa el [problema de la sesión 1](../U3_S01_problema_justificacion/desarrollo.md). La base documental se mantiene limitada a los dos borradores proporcionados. Las decisiones de operacionalización que se formulan aquí son propuestas para el estudio, no resultados extraídos de los artículos. Las fuentes primarias citadas en los borradores siguen pendientes de consulta.
 
-### Comprobación
+## E1. Pregunta de investigación revisada
 
-- [ ] La pregunta identifica el fenómeno o la relación que se investigará.
-- [ ] La población, unidad de análisis o contexto están delimitados.
-- [ ] La pregunta puede responderse mediante evidencia.
-- [ ] La pregunta deriva del problema y de la brecha de investigación.
+### Brecha identificada
 
----
+La evidencia reunida no permite establecer qué diferencias de desempeño existen entre TF-IDF + SVM y un Transformer en español al clasificar sentimientos en el mismo corpus de comentarios ciudadanos sobre limpieza pública y recojo de residuos en Juliaca. La brecha es comparativa y contextual, y conserva su carácter preliminar hasta ampliar y documentar la búsqueda bibliográfica.
+
+### Pregunta
+
+¿Qué diferencias de desempeño, medidas principalmente mediante macro-F1, presentan un clasificador TF-IDF + SVM y un modelo Transformer en español al clasificar sentimientos en comentarios ciudadanos sobre limpieza pública y recojo de residuos sólidos en Juliaca?
+
+### Revisión de la delimitación
+
+La pregunta identifica el factor comparado, el resultado, el contexto y la unidad textual de análisis. Puede responderse mediante predicciones contrastadas con etiquetas de referencia sobre una misma partición de prueba. Su viabilidad depende de confirmar la fuente, el periodo, el volumen de datos y la posibilidad de etiquetarlos consistentemente. No implica representar a toda la ciudadanía ni evaluar directamente la calidad del servicio municipal.
 
 ## E2. Objetivo general
 
-El objetivo general debe expresar el resultado principal de la investigación
-mediante un verbo en infinitivo. Debe responder directamente a la pregunta de
-investigación.
+Comparar el desempeño de un clasificador TF-IDF + SVM y un modelo Transformer en español para clasificar sentimientos en comentarios ciudadanos sobre limpieza pública y recojo de residuos sólidos en Juliaca, mediante macro-F1 como indicador principal y métricas complementarias bajo un protocolo de evaluación común.
 
-**Objetivo general:**
-
-[Verbo en infinitivo + fenómeno o relación que se estudiará + población o
-contexto + alcance.]
-
-### Comprobación
-
-- [ ] Utiliza un verbo en infinitivo.
-- [ ] Expresa un resultado de investigación y no una actividad administrativa.
-- [ ] Es claro, viable y verificable.
-- [ ] Mantiene correspondencia directa con la pregunta de investigación.
-
----
+El objetivo responde directamente a la pregunta y será verificable mediante resultados experimentales documentados, una vez comprobada la factibilidad del corpus.
 
 ## E3. Objetivos específicos
 
-Los objetivos específicos deben descomponer el objetivo general en resultados
-parciales, ordenados y verificables. Se recomienda formular entre tres y cinco.
-
-| N.° | Objetivo específico | Resultado verificable | Relación con el objetivo general |
-|---:|---|---|---|
-| OE1 | [Redactar aquí] | | |
-| OE2 | [Redactar aquí] | | |
-| OE3 | [Redactar aquí] | | |
-| OE4 | [Opcional] | | |
-| OE5 | [Opcional] | | |
-
-### Comprobación
-
-- [ ] Cada objetivo utiliza un verbo en infinitivo.
-- [ ] Los objetivos siguen una secuencia lógica.
-- [ ] Cada objetivo contribuye al objetivo general.
-- [ ] Los objetivos no son únicamente tareas como buscar, leer o encuestar.
-- [ ] Los resultados pueden verificarse al finalizar la investigación.
-
----
-
-## E4. Hipótesis de investigación
-
-### Correspondencia con el enfoque y alcance
-
-**Enfoque de investigación:**
-
-[Cuantitativo, cualitativo o mixto.]
-
-**Alcance previsto:**
-
-[Exploratorio, descriptivo, correlacional, explicativo u otro.]
-
-**¿El estudio requiere hipótesis? Justificación:**
-
-[Explicar la decisión metodológica. Los estudios cuantitativos correlacionales,
-explicativos o experimentales suelen requerir hipótesis. Los estudios
-exploratorios, descriptivos o cualitativos pueden trabajar con preguntas o
-supuestos de investigación.]
-
-### Hipótesis general de investigación (H1)
-
-[Proponer una respuesta provisional, clara y contrastable a la pregunta de
-investigación.]
-
-### Hipótesis nula (H0)
-
-[Formular la ausencia del efecto, diferencia o relación planteada en H1.]
-
-### Hipótesis específicas
-
-Completar cuando el estudio y los objetivos específicos las requieran.
-
-| Código | Hipótesis específica | Objetivo específico relacionado |
-|---|---|---|
-| HE1 | [Redactar aquí] | OE... |
-| HE2 | [Redactar aquí] | OE... |
-| HE3 | [Redactar aquí] | OE... |
-
-### Comprobación
-
-- [ ] La hipótesis responde a la pregunta de investigación.
-- [ ] Expresa una relación, efecto o diferencia contrastable.
-- [ ] Incluye las variables y el contexto del estudio.
-- [ ] No afirma causalidad si el diseño solo permite describir o correlacionar.
-
----
-
-## E5. Identificación de variables
-
-| Tipo | Variable | Función dentro del estudio | Relación con la hipótesis |
+| Código | Objetivo específico | Resultado verificable | Relación con el objetivo general |
 |---|---|---|---|
-| Independiente | | Factor que se introduce, compara o analiza | |
-| Dependiente | | Resultado que se observará o medirá | |
-| Control o interviniente | | Condición que podría afectar los resultados | |
+| OE1 | Caracterizar la disponibilidad y las propiedades de un corpus de comentarios pertinentes al contexto de Juliaca, considerando procedencia, periodo, distribución de etiquetas y consistencia de la anotación. | Ficha del corpus, guía de etiquetado, recuentos por clase y registro de desacuerdos revisados. | Delimita los datos y las condiciones bajo las que tendrá sentido comparar los modelos. |
+| OE2 | Evaluar el desempeño de TF-IDF + SVM y de un Transformer en español sobre una partición de prueba común y con configuraciones documentadas. | Predicciones por comentario, configuraciones y métricas de cada modelo. | Produce resultados comparables para los dos enfoques. |
+| OE3 | Determinar la magnitud y la incertidumbre de la diferencia de macro-F1 entre ambos enfoques conforme a un procedimiento de comparación definido antes de evaluar el conjunto de prueba. | Diferencia de macro-F1 y análisis de incertidumbre según el protocolo adoptado. | Responde a la pregunta y permite contrastar la hipótesis. |
+| OE4 | Analizar los errores de clasificación por categoría de sentimiento y describir las limitaciones de aplicación de los modelos al corpus estudiado. | Matrices de confusión y análisis documentado de errores. | Explica el alcance de las diferencias observadas y sus límites. |
 
-Si el estudio no utiliza variables en sentido cuantitativo, justificar y
-registrar las categorías de análisis que correspondan.
-
----
-
-## E6. Operacionalización de variables
-
-### Variable independiente
-
-| Elemento | Descripción |
-|---|---|
-| Nombre de la variable | |
-| Definición conceptual | [Definir con respaldo de literatura científica.] |
-| Definición operacional | [Explicar cómo será aplicada, observada o medida.] |
-
-| Dimensión | Indicador | Forma de medición | Escala o unidad | Instrumento o fuente |
-|---|---|---|---|---|
-| | | | | |
-| | | | | |
-
-### Variable dependiente
-
-| Elemento | Descripción |
-|---|---|
-| Nombre de la variable | |
-| Definición conceptual | [Definir con respaldo de literatura científica.] |
-| Definición operacional | [Explicar cómo será observada o medida.] |
-
-| Dimensión | Indicador | Forma de medición | Escala o unidad | Instrumento o fuente |
-|---|---|---|---|---|
-| | | | | |
-| | | | | |
-
-### Variables de control o intervinientes
-
-| Variable | Posible efecto | Estrategia de control o registro |
-|---|---|---|
-| | | |
-| | | |
-
----
-
-## E7. Matriz de consistencia
-
-La matriz debe permitir verificar la trazabilidad entre los componentes
-centrales de la investigación.
-
-| Problema o pregunta | Objetivo general | Objetivos específicos | Hipótesis | Variables o categorías | Indicadores |
-|---|---|---|---|---|---|
-| | | OE1. | | | |
-| | | OE2. | | | |
-| | | OE3. | | | |
-
-### Revisión de consistencia
-
-- [ ] El objetivo general responde a la pregunta de investigación.
-- [ ] Los objetivos específicos permiten alcanzar el objetivo general.
-- [ ] Las hipótesis corresponden con los objetivos y el alcance del estudio.
-- [ ] Las variables aparecen en la pregunta, los objetivos y las hipótesis.
-- [ ] Los indicadores permiten observar o medir las variables.
-- [ ] Los instrumentos previstos pueden producir los datos requeridos.
-
----
-
-## E8. Referencias
-
-Registrar las fuentes científicas utilizadas para definir conceptual y
-operacionalmente las variables.
-
-1. [Referencia]
-2. [Referencia]
-3. [Referencia]
-
----
-
-## Lista de comprobación final
-
-- [ ] La pregunta de investigación fue revisada.
-- [ ] El objetivo general está alineado con la pregunta.
-- [ ] Se formularon entre tres y cinco objetivos específicos.
-- [ ] Se justificó si el estudio requiere hipótesis.
-- [ ] La hipótesis es clara y contrastable, cuando corresponde.
-- [ ] Las variables o categorías están identificadas.
-- [ ] Las variables cuentan con definiciones conceptuales y operacionales.
-- [ ] Se definieron dimensiones, indicadores, escalas e instrumentos.
-- [ ] La matriz de consistencia muestra trazabilidad metodológica.
-- [ ] Las fuentes utilizadas están correctamente identificadas.
+Los objetivos siguen una secuencia de caracterización, evaluación, comparación y análisis. La recopilación, el entrenamiento y el registro de parámetros serán actividades necesarias para alcanzar estos resultados; no se presentan como resultados ya obtenidos.
