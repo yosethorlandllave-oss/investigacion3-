@@ -1,12 +1,14 @@
 # Desarrollo — U3 Sesión 3: Estado del arte
 
+**Título de la investigación:** Comparación de modelos de procesamiento del lenguaje natural para clasificar sentimientos en comentarios ciudadanos sobre la limpieza pública y el recojo de residuos sólidos en Juliaca, Puno
+
 **Autor:** Yoseth Orlando Llave Huachaca
 
 **Curso:** Investigación III — Universidad Peruana Unión
 
 **Fecha de corte:** 31 de octubre de 2026
 
-**Tema:** clasificación de sentimientos en comentarios sobre limpieza pública y recojo de residuos sólidos en Juliaca mediante TF-IDF + SVM y un Transformer en español.
+**Delimitación metodológica:** clasificación de sentimientos en comentarios sobre limpieza pública y recojo de residuos sólidos en Juliaca mediante TF-IDF + SVM y un Transformer en español.
 
 **Estado del producto:** borrador académico con revisión bibliográfica estructurada de 11 publicaciones. La búsqueda externa amplía los dos documentos iniciales conforme a la actividad de esta sesión. No se declara una RSL exhaustiva concluida ni se presentan resultados experimentales propios. La cobertura y los accesos pendientes se documentan para su posterior ampliación.
 

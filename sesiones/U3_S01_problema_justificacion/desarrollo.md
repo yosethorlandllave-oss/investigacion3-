@@ -1,5 +1,7 @@
 # Desarrollo — U3 Sesión 1: Identificación del problema y justificación
 
+**Título de la investigación:** Comparación de modelos de procesamiento del lenguaje natural para clasificar sentimientos en comentarios ciudadanos sobre la limpieza pública y el recojo de residuos sólidos en Juliaca, Puno
+
 **Autor:** Yoseth Orlando Llave Huachaca
 
 **Curso:** Investigación III — Universidad Peruana Unión
