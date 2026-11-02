@@ -1,46 +1,37 @@
-# E5. Taxonomía y mapa de la literatura
+# Taxonomía del corpus
 
-**Elaboración propia a partir de P01–P11.** Los identificadores remiten a la [matriz de síntesis](../matrices/matriz_sintesis.md) y a [E9](../../desarrollo.md). La clasificación organiza funciones y métodos; no representa una jerarquía de calidad ni una red bibliométrica generada automáticamente.
+El mapa agrupa las 12 publicaciones de la [matriz de síntesis](../matrices/matriz_sintesis.md) por función dentro del proceso que va desde la reseña hasta la recomendación. Las categorías pueden solaparse; no expresan jerarquía de calidad.
 
-## Taxonomía por pregunta que responde la literatura
-
-| Categoría | Subcategoría / trabajos | Conocimiento aportado | Lo que queda por comprobar en Juliaca |
+| Etapa | Enfoque | Trabajos | Salida evaluada |
 |---|---|---|---|
-| A. Fundamentos de clasificación | Supervisados clásicos: P01. Preentrenamiento contextual: P02. | Dos familias que justifican la comparación. | Diferencia bajo iguales datos y etiquetas. |
-| B. Adaptación de representaciones | Español web: P05. Español social: P03. Multilingüe social: P04. Variedad peruana: P10. | El idioma y el tipo de texto importan para seleccionar el modelo. | Transferencia al servicio de limpieza y sus formas de expresión. |
-| C. Aplicación a residuos | Léxico + temas: P06. LSTM + coocurrencia: P08. Transformer + difusión: P09. SnowNLP + temas: P11. | Sentimientos como instrumento para estudiar opiniones y políticas. | Calidad de las predicciones antes de interpretar opiniones agregadas. |
-| D. Síntesis del campo | Survey de métodos y retos: P07. | Organización de familias y problemas abiertos. | Protocolo específico y viable para el proyecto. |
+| 1. Interpretar texto y sentimiento | Clasificación general, clásica, neuronal y con Transformer | R01, R03–R05, R12 | Polaridad; accuracy/F1. |
+| 2. Representar usuario, ítem y opinión | Incorporación de reseñas en la predicción colaborativa | R02, R06–R07, R10, R12 | Rating, ranking o preferencia; MSE/RMSE u otras métricas del recomendador. |
+| 3. Explicar o sintetizar | Recomendación explicable, reseñas recuperadas y opiniones por aspecto | R06–R10 | Fidelidad, cobertura, prevalencia y evaluación humana. |
+| 4. Ordenar el campo | Survey de sentimiento por aspecto y survey de LLM para recomendación | R08, R11 | Taxonomías, retos y agenda de investigación. |
 
-Las categorías no son excluyentes: P09 usa un Transformer, pero se ubica en C por su finalidad social; P10 es un estudio comparativo y se ubica en B por su adaptación lingüística. LDA/BERTopic organizan temas, mientras que SVM, LSTM y BERT pueden producir etiquetas de sentimiento; no se comparan como si cumplieran la misma función.
+## Mapa conceptual
 
-## Mapa de proximidad al proyecto
+1. **Reseña**: texto libre y, en algunos datasets, rating numérico asociado.
+2. **Análisis del texto**: polaridad general (R01, R03–R05, R12) o aspectos específicos (R08).
+3. **Representación para el usuario y el ítem**: integración de señales textuales y colaborativas (R02, R06–R07, R10, R12).
+4. **Salida del sistema**: rating/recomendación; explicación o resumen sustentado en reseñas (R06–R10).
+5. **Evaluación**: clasificador, recomendador y explicación requieren métricas diferentes.
 
-| Eje | Evidencia más próxima en el corpus | Distancia que permanece |
-|---|---|---|
-| Método | P01–P05, P10 | No todos comparan TF-IDF + SVM con un Transformer bajo el protocolo propuesto. |
-| Variedad lingüística | P10; P03–P05 como recursos de español | Español peruano general no equivale a discurso local sobre limpieza. |
-| Dominio | P06, P08, P09, P11 | Separación de residuos en China no equivale a recojo y limpieza en Juliaca. |
-| Intersección de los tres ejes | No cubierta por un experimento directamente equivalente dentro de los once trabajos seleccionados | Diseñar y evaluar un corpus local con controles comunes. |
+La secuencia es una síntesis conceptual propia, no un flujo implementado por cada artículo. R09, por ejemplo, resume opiniones sin estimar recomendación personalizada; R03 clasifica sentimiento sin evaluar una recomendación downstream. Los estudios no deben presentarse como un sistema único.
 
-La intersección es una **inferencia de esta revisión**, acotada al corpus y a su cobertura. No demuestra prioridad mundial ni ausencia de otros trabajos.
+## Evolución representada
 
-## Evolución temática observada
-
-| Periodo | Cambio representado en el corpus |
+| Año / tramo | Hito en este corpus |
 |---|---|
-| 2002 | Comparación de clasificadores supervisados con representaciones de palabras (P01). |
-| 2019 | Preentrenamiento contextual y ajuste a tareas (P02). |
-| 2022 | Especialización por idioma y plataforma (P03–P05). |
-| 2023–2025 | Coexistencia de léxicos, redes recurrentes y Transformers en estudios de residuos (P06, P08, P09, P11); síntesis del campo (P07). |
-| 2026 | Evaluación específica de una variedad peruana (P10). |
+| 2002 | Comparación supervisada de polaridad en reseñas (R01). |
+| 2017 | Redes profundas que incorporan texto de usuario e ítem en recomendación (R02). |
+| 2019 | Fundamento de preentrenamiento contextual citado para la familia BERT; antecedente metodológico, no incluido en el corpus evaluado. |
+| 2022–2023 | Ensambles sentimentales, Transformers para reseñas/juegos y prompts para recomendación explicable (R03–R08). |
+| 2024 | LLM para explicaciones y resúmenes fundamentados, junto con survey de LLM recomendadores (R09–R11). |
+| 2026 | Comparación de estrategias de LLM para sentimiento derivado de rating dentro de recomendación, con costo explícito (R12). |
 
-La coexistencia de métodos impide describir una sustitución total de técnicas clásicas por Transformers. Esta cronología es ilustrativa: no se calcularon frecuencias de publicación que permitan estimar tendencias globales.
+La cronología describe los trabajos seleccionados; no cuantifica la evolución general del campo.
 
-## Relaciones de citación comprobadas
+## Relación con la brecha
 
-| Documento citante | Documento citado | Lugar de verificación |
-|---|---|---|
-| P03 | P02 | Antecedentes y referencias de RoBERTuito. |
-| P10 | P02, P03, P05, P07 | Referencias del artículo peruano. |
-
-Las relaciones anteriores sí representan citas verificadas. Las conexiones entre categorías y la propuesta representan razonamiento temático propio, no citas. No se calculan centralidad, cocitación ni impacto con esta pequeña red.
+El corpus contiene trabajos que evalúan polaridad y otros que evalúan recomendación o explicación. R12 aproxima directamente ambos componentes y añade costo; aun así, operacionaliza polaridad desde ratings y estudia un conjunto concreto de modelos y datos. La brecha de la RSL se formula como **síntesis todavía fragmentada entre calidad de análisis de sentimiento, utilidad real para recomendación, explicabilidad y eficiencia**, considerando además diferencias de dominios y supervisión. Es una interpretación de la muestra revisada, no una declaración de inexistencia absoluta.

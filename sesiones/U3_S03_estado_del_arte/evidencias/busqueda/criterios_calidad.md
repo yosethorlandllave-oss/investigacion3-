@@ -1,50 +1,44 @@
-# E2. Criterios de selección y evaluación de calidad
+# Criterios de selección y evaluación de calidad
 
-**Corte:** 31/10/2026. Evaluación documental realizada para esta sesión; no constituye una certificación externa de calidad.
+**Fecha:** 1/11/2026. La clasificación de venue complementa la valoración del trabajo; no sustituye la revisión de método ni se proyecta retrospectivamente como garantía de calidad.
 
-## Reglas de elegibilidad
+## Lista cualitativa aplicada
 
-1. Incluir full papers de conferencias, artículos de revista y surveys formalmente publicados, pertinentes a métodos de sentimientos, adaptación al español/Perú o residuos y opinión digital.
-2. Priorizar 2022–2026 y alcanzar al menos 80 % de actualidad; admitir antecedentes anteriores si su función seminal está justificada.
-3. Exigir fuente primaria con información suficiente para la contribución que se le atribuye. Un resumen aislado permite detectar candidatos, no completar resultados experimentales.
-4. Priorizar CORE A*, A o B, o revistas Q1/Q2 indicando índice, categoría y año. El ranking orienta; no sustituye la lectura crítica del artículo.
-5. Excluir duplicados, materiales comerciales, referencias sin identificación suficiente y trabajos cuyo foco no aporte al alcance delimitado. Los preprints solo pueden ser complementarios y se distinguen de la publicación formal.
-6. Mantener separados los candidatos pendientes por acceso o verificación; no confundir falta de acceso con baja calidad científica.
+| Criterio | Pregunta de evaluación |
+|---|---|
+| A. Pertinencia | ¿El estudio analiza sentimiento en reseñas, utiliza texto/opinión para recomendación o evalúa explicaciones/resúmenes basados en reseñas? |
+| B. Identificación | ¿Autores, año, título, venue y DOI/repositorio se pueden verificar? |
+| C. Método y datos | ¿Se describen familia del modelo, fuente de texto y tarea? |
+| D. Evaluación | ¿Se informa partición o referencia de etiquetas y métricas adecuadas a la tarea? ¿Se distingue clasificación de recomendación y de explicación? |
+| E. Transparencia | ¿Se reportan limitaciones, parámetros, código o datos cuando corresponde? ¿Se diferencian recursos declarados de recursos ejecutados? |
+| F. Calidad de fuente | ¿Es artículo de revista o paper revisado por pares y qué rango reciente verificable tiene el venue? |
 
-## Dimensiones de evaluación
+No se aplicó una suma numérica arbitraria. Artículos con resumen indexado pero apertura directa limitada se describen conforme a la información visible; no se adjudican parámetros que no se hayan verificado. R05 se retiene por su alta pertinencia al tema de videojuegos y por estar en IEEE; su ranking CORE/Scimago específico de la conferencia ICEEI no se confirmó. La evaluación editorial de otros artículos en fuentes de acceso parcial queda limitada a metadatos y texto indexado.
 
-| Dimensión | Pregunta aplicada | Consecuencia para la síntesis |
-|---|---|---|
-| Pertinencia | ¿Aporta al método, idioma, contexto o problema? | Clasificación por función; no exigir que todos estudien Juliaca. |
-| Validez de evaluación | ¿Se conocen datos, partición y métrica? ¿Es entrenamiento o prueba? | Comparar solo resultados compatibles; marcar NR donde no se verificó. |
-| Etiquetado | ¿Se explica la referencia humana y su consistencia? | Registrar incertidumbre y no asumir que «manual» equivale a fiable. |
-| Transferibilidad | ¿Coinciden lengua, plataforma, población y tema? | Limitar inferencias al corpus correspondiente. |
-| Reproducibilidad | ¿Se declaran modelos, datos o código? | Distinguir disponibilidad declarada de artefactos efectivamente ejecutados. |
-| Transparencia | ¿Se pueden localizar las afirmaciones y limitaciones? | Registrar sección/tabla y enlace primario. |
+## Venue e indicadores
 
-No se fabrica una puntuación numérica agregada: las carencias tienen consecuencias distintas para un survey, un modelo base y una aplicación social. La matriz documenta decisiones por trabajo.
-
-## Verificación de venues
-
-Todos los enlaces se consultaron el 31/10/2026. La clasificación de una edición reciente no se atribuye retroactivamente al año de publicación. AIS, CiteScore y SJR son indicadores distintos; sus cuartiles no son intercambiables.
-
-| Trabajos | Venue | Indicador verificado | Fuente / alcance |
+| R# | Venue | Verificación disponible al corte | Alcance de la verificación |
 |---|---|---|---|
-| P01 | EMNLP | ICORE 2026 A* | [Portal CORE](https://portal.core.edu.au/conf-ranks/?search=EMNLP&by=all&source=all&sort=atitle&page=1). Referencia de prestigio actual, no ranking histórico de 2002. |
-| P02 | NAACL | CORE 2023 A; ICORE 2026 A | [Ficha CORE](https://portal.core.edu.au/conf-ranks/1648/). |
-| P03–P04 | LREC | CORE 2023 B; ICORE 2026 B | [Ficha CORE](https://portal.core.edu.au/conf-ranks/2092/). En CORE 2021 figuraba C; se explicita esta diferencia temporal. |
-| P05 | Procesamiento del Lenguaje Natural | SJR 2024 Q2 Computer Science Applications; Q1 Linguistics and Language | [Calidad de la revista, SEPLN](https://www.sepln.org/index.php/la-revista/calidad). En 2022: Q3 en Computer Science Applications y Q1 en lingüística. |
-| P06 | International Journal of Environmental Research and Public Health | CiteScore 2023: Q1 Public Health, Environmental and Occupational Health; Q2 Pollution | [Anuncio editorial de 12/06/2024](https://www.mdpi.com/journal/ijerph%C2%A0/news-and-conferences/news/8589). No se afirma cuartil JCR actual. |
-| P07 | Journal of King Saud University – Computer and Information Sciences | AIS 2024 Q2, Computer Science, Information Systems | [Clasificación UEFISCDI, edición junio 2025](https://uefiscdi.gov.ro/resource-860007-clasament.ais.jcr.2024.pdf), página física 99. No confundir con la revista del mismo nombre terminada en Science. |
-| P08 | Heliyon | SJR 2024 Q1 Multidisciplinary | [CroRIS, sistema institucional croata](https://www.croris.hr/casopisi/casopis/22186). Reproducción institucional del indicador; no consulta directa a Scimago. |
-| P09 | Humanities and Social Sciences Communications | SJR 2024 Q1 Social Sciences (miscellaneous) | [CroRIS](https://www.croris.hr/casopisi/casopis/30001). Otras categorías pueden tener otro cuartil. |
-| P10 | Applied Artificial Intelligence | AIS 2024 Q2, Computer Science, Artificial Intelligence | [UEFISCDI](https://uefiscdi.gov.ro/resource-860007-clasament.ais.jcr.2024.pdf), página física 85. |
-| P11 | Frontiers in Environmental Science | AIS 2024 Q2, Environmental Sciences | [UEFISCDI](https://uefiscdi.gov.ro/resource-860007-clasament.ais.jcr.2024.pdf), entrada del journal. |
+| R01 | EMNLP | ICORE 2026 A* | Ranking actual de conferencia, no rango histórico de 2002. [CORE](https://portal.core.edu.au/conf-ranks/?by=acronym&search=EMNLP). |
+| R02 | WSDM | ICORE 2026 A | Rango contemporáneo para ubicar el venue. [CORE](https://portal.core.edu.au/conf-ranks/?by=acronym&search=WSDM). |
+| R03 | IEEE Access | Artículo de revista revisado por pares; indicador exacto de categoría no asentado en esta ficha | No asignar cuartil sin categoría y año reproducibles. |
+| R04 | Sensors | Revista de investigación; Q por categoría/año no se usa en la selección | Mantener evaluación del artículo independiente de métricas de la revista. |
+| R05 | ICEEI 2023, IEEE | Paper de conferencia publicado en proceedings IEEE; categoría CORE/CORE rank de ICEEI no verificada | Pertinencia directa, juicio de venue reservado. |
+| R06 | ACM Transactions on Information Systems | AIS 2024 Q1 en Computer Science / Information Systems | Fuente pública: [clasificación UEFISCDI, edición junio 2025](https://uefiscdi.gov.ro/resource-860007-clasament.ais.jcr.2024.pdf). |
+| R07 | AAAI 2023 | ICORE 2026 A* | Rango de conferencia actual, no retroactivo. [CORE](https://portal.core.edu.au/conf-ranks/?by=acronym&search=AAAI). |
+| R08 | IEEE Transactions on Knowledge and Data Engineering | AIS 2024 Q1 en AI y en Information Systems | [UEFISCDI, edición junio 2025](https://uefiscdi.gov.ro/resource-860007-clasament.ais.jcr.2024.pdf). |
+| R09 | Transactions of the ACL | AIS 2024 Q1 en Computer Science: Artificial Intelligence | [UEFISCDI](https://uefiscdi.gov.ro/resource-860007-clasament.ais.jcr.2024.pdf). |
+| R10 | Findings of EMNLP | Artículo de proceedings ACL revisado por pares; no se transfiere un rango del evento principal sin fuente específica | Clasificación temática y experimentos pueden consultarse en el artículo. |
+| R11 | World Wide Web | AIS 2024 Q2 en Computer Science / Information Systems | [UEFISCDI](https://uefiscdi.gov.ro/resource-860007-clasament.ais.jcr.2024.pdf). |
+| R12 | Future Internet | Artículo de revista revisado por pares, publicado 20/02/2026; indicador de venue no asentado aquí | La novedad y datos actuales hacen especialmente necesaria una lectura crítica; el cuartil no se infiere. |
 
-Scimago directo devolvió 403 durante la consulta. Se recurrió a fuentes editoriales, institucionales y a la agencia pública UEFISCDI, identificando el indicador exacto. Los rankings anteriores son evidencias bibliométricas complementarias, no parte de las 11 referencias científicas ni del cálculo de actualidad. No se utilizan recuentos de citas dinámicos para decidir qué modelo es mejor.
+AIS, SJR, CiteScore y CORE son sistemas diferentes. Si el equipo quiere completar la tabla de rangos para cada venue debe registrar edición, categoría y fuente; no atribuir un mismo cuartil a todas las áreas de una revista.
 
-## Dos seminales y un survey
+## Dos antecedentes seminales y surveys
 
-- **P01, Pang et al. (2002):** antecedente temprano de comparación supervisada de sentimientos y del uso de SVM. La [ficha oficial ACL](https://aclanthology.org/W02-1011/) registra el reconocimiento Test-of-Time de NAACL 2018. Su función es fundamentar la línea base; no demostrar el rendimiento de TF-IDF en español.
-- **P02, Devlin et al. (2019):** fundamento del preentrenamiento bidireccional y ajuste posterior que sustenta los Transformers considerados. La [ficha oficial ACL](https://aclanthology.org/N19-1423/) registra Best Long Paper; P03 y P10 permiten verificar su continuidad en esta línea. No es un estudio municipal.
-- **P07, Mao et al. (2024):** survey sistemático que organiza métodos y retos. Su sección de selección identifica 132 estudios finales; las menciones introductorias a un conjunto más amplio no se usan como tamaño final. Aporta clasificación del campo, no un experimento propio que pueda competir en la matriz de métricas.
+- **R01 — Pang, Lee y Vaithyanathan (2002):** estudio temprano que comparó métodos supervisados en clasificación de sentimientos; se retiene como antecedente fundacional de análisis sentimental en reseñas. No representa un modelo de lenguaje moderno ni un recomendador.
+- **R02 — Zheng, Noroozi y Yu (2017):** DeepCoNN integra conjuntamente reseñas de usuario e ítem para predicción de ratings. Se retiene como antecedente fundacional del uso del texto de reseñas dentro del recomendador.
+- **R08 — Zhang et al. (2023):** survey sobre tareas y métodos de análisis sentimental por aspecto; organiza granularidad, polaridad y desafíos de transferencia.
+- **R11 — Wu et al. (2024):** survey más directamente relacionado con modelos de lenguaje y recomendación; separa paradigmas discriminativos y generativos y sistematiza técnicas y retos.
+
+Se llaman seminales por su función fundacional en sus respectivas líneas, no porque sean publicaciones recientes. Los dos surveys cumplen funciones distintas y no son comparadores experimentales.

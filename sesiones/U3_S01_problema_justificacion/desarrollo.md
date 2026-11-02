@@ -1,112 +1,68 @@
 # Desarrollo — U3 Sesión 1: Identificación del problema y justificación
 
-**Título de la investigación:** Comparación de modelos de procesamiento del lenguaje natural para clasificar sentimientos en comentarios ciudadanos sobre la limpieza pública y el recojo de residuos sólidos en Juliaca, Puno
+**Título de la investigación:** Análisis de Sentimientos con Modelos de Lenguaje para Sistemas de Recomendación: Una Revisión Sistemática de la Literatura
 
-**Autor:** Yoseth Orlando Llave Huachaca
-
-**Curso:** Investigación III — Universidad Peruana Unión
-
-**Fecha:** 31 de octubre de 2026
-
-**Estado:** avance para incorporación posterior al Perfil de Proyecto de Investigación (PPI).
-
-**Alcance documental.** Este avance se redacta exclusivamente a partir de los dos borradores proporcionados. Las atribuciones a publicaciones científicas proceden del segundo borrador; sus textos originales no se han consultado en esta sesión. El primer borrador aporta antecedentes técnicos de análisis de sentimientos en reseñas. La matriz de trazabilidad y las copias de los documentos se encuentran en [evidencias](evidencias/README.md). Este avance no constituye una RSL concluida ni presenta resultados experimentales.
+**Autor:** Yoseth Orlando Llave Huachaca  
+**Curso:** Investigación III — Universidad Peruana Unión  
+**Fecha:** 1 de noviembre de 2026  
+**Estado:** formulación del problema de revisión, para integrar al PPI.
 
 ## E1. Tema de investigación
 
-**Tema delimitado:** Comparación del desempeño de un clasificador TF-IDF + SVM y un modelo Transformer en español para clasificar sentimientos en comentarios ciudadanos sobre limpieza pública y recojo de residuos sólidos en Juliaca, Puno.
+La revisión estudia métodos de análisis de sentimientos basados en modelos de lenguaje para interpretar reseñas y usar su información en sistemas de recomendación. Incluye tanto clasificación de polaridad como uso de reseñas para estimar ratings, personalizar recomendaciones, producir explicaciones o resumir opiniones. Distingue análisis de sentimiento, predicción de preferencias y recomendación como tareas relacionadas, pero con resultados de evaluación diferentes.
 
-La investigación se ubica en el procesamiento del lenguaje natural y la clasificación supervisada de texto. Su unidad de análisis será el comentario textual individual relacionado con la limpieza de espacios públicos, acumulación de residuos o frecuencia del recojo, siempre que estos contenidos estén presentes en los datos disponibles.
+## E2. Contexto y situación problemática
 
-Se propone comparar TF-IDF + SVM con un Transformer en español, cuya selección entre alternativas como BETO o RoBERTuito dependerá de su pertinencia y viabilidad computacional. El desempeño se analizará principalmente mediante macro-F1, acompañado de precisión, exhaustividad y matriz de confusión.
+Las reseñas en línea contienen expresiones valorativas sobre productos, servicios y contenidos. Los modelos de lenguaje permiten representar aspectos semánticos y contextualizar expresiones; los recomendadores, a su vez, pueden combinar texto con ratings e interacciones para predecir preferencias o explicar resultados. Sin embargo, un buen clasificador sentimental no demuestra por sí solo que las recomendaciones mejoren: para establecerlo se debe medir el resultado downstream del sistema.
 
-La fuente de comentarios, el periodo de observación, el tamaño del corpus y las categorías de sentimiento quedan pendientes de una comprobación de factibilidad. La población accesible estará constituida por los comentarios que cumplan los criterios establecidos; no se asumirá que representa a toda la ciudadanía de Juliaca.
+El Documento 1 plantea una RSL sobre sentimientos en reseñas con modelos de lenguaje, con énfasis declarado en sistemas de recomendación de videojuegos. Su introducción discute Steam/Epic, sentimiento por aspectos, modelos híbridos, interpretabilidad y eficiencia. Luego la estrategia PICOC amplía el contexto a reseñas en línea y comercio electrónico. El texto informa 29 estudios, pero su bibliografía contiene registros incompletos y trabajos de relevancia heterogénea. Por ello, sus cifras y conclusiones no pueden asumirse como resultados reproducibles de la presente revisión.
 
-## E2. Situación problemática
+La literatura localizada también usa distintas unidades y métricas: F1 o accuracy para clasificar polaridad; MSE/RMSE para predicción de ratings; ranking para calidad de recomendación; y medidas automáticas o evaluación humana para explicaciones. Compararlas como si midieran el mismo fenómeno puede llevar a conclusiones erróneas. La situación problemática es la falta de una síntesis trazable que conecte qué se extrae de las reseñas, cómo se incorpora a modelos de lenguaje y si ello aporta a la recomendación, explicación o experiencia de usuario.
 
-### Contexto
+## E3. Evidencia de la existencia del problema
 
-La gestión de residuos sólidos forma parte de los asuntos ambientales y municipales de Juliaca. El segundo borrador recoge la investigación de Cayra Uscamayta (2024), referida a contaminación ambiental y gestión de residuos en la Municipalidad Provincial de San Román. Este antecedente sitúa el tema en el contexto local, pero no demuestra por sí mismo la disponibilidad de comentarios digitales ni el desempeño de clasificadores automáticos.
-
-Las plataformas digitales pueden contener valoraciones, quejas y preocupaciones acerca de servicios públicos. Los antecedentes de Jiang et al. (2021), Xue y Liu (2023) y Huang et al. (2025), según su descripción en el borrador, muestran aplicaciones del análisis de opiniones a conversaciones sobre segregación, reciclaje o clasificación de residuos. Esas aplicaciones respaldan la pertinencia del tema, aunque proceden de contextos distintos al de Juliaca.
-
-### Situación problemática y problema computacional
-
-El problema práctico consiste en la necesidad de organizar e interpretar opiniones ciudadanas relacionadas con estos servicios. Su manifestación y volumen en fuentes digitales locales todavía deben documentarse mediante un piloto de recopilación.
-
-El problema computacional consiste en determinar qué diferencias de desempeño existen entre dos enfoques de clasificación de sentimientos aplicados al mismo corpus local. Las expresiones coloquiales, las diferencias entre dominios, la distribución de las categorías y la consistencia del etiquetado pueden afectar la evaluación. Los antecedentes disponibles no permiten anticipar el comportamiento de TF-IDF + SVM y un Transformer en estos datos.
-
-La evidencia sobre restaurantes peruanos y lenguaje coloquial peruano justifica comparar los modelos en el corpus concreto, en lugar de trasladar directamente los resultados de otros estudios. Para que la comparación sea interpretable se necesitarán etiquetas de referencia, una partición de prueba común y control de duplicados entre subconjuntos.
-
-## E3. Evidencia científica del problema
-
-La siguiente evidencia se presenta conforme a las descripciones incluidas en el Documento 2. No se atribuyen resultados numéricos que no hayan sido comprobados en sus publicaciones originales.
-
-| Fuente citada en el borrador | Evidencia bibliográfica reportada | Relación con el problema y límite de aplicación |
+| Evidencia primaria | Hallazgo útil para delimitar el problema | Límite |
 |---|---|---|
-| Jiang et al. (2021) | Analizan participación y sentimientos en redes sociales relacionados con segregación y reciclaje de residuos domésticos. | Sustentan la pertinencia de estudiar conversaciones digitales sobre residuos; no evalúan el corpus de Juliaca. |
-| Xue y Liu (2023) | Estudian la evolución de la opinión pública en línea sobre clasificación de residuos en Shanghái. | Aportan un antecedente temático; las diferencias de contexto e idioma limitan la transferencia de resultados. |
-| Huang et al. (2025) | Abordan sentimiento y participación en redes sociales sobre separación de residuos; el borrador señala clasificación basada en BERT. | Vinculan modelos de lenguaje con el dominio de residuos; no demuestran superioridad sobre SVM en Juliaca. |
-| Adrianzón Torres y Escobedo Cárdenas (2021) | Comparan métodos de aprendizaje automático para opiniones sobre restaurantes peruanos en Facebook. | Justifican evaluar clasificadores tradicionales en opiniones en español peruano; el dominio es diferente. |
-| Calizaya-Milla et al. (2026) | Comparan modelos BERT monolingües para análisis de sentimientos en contextos de lenguaje coloquial peruano. | Respaldan considerar la adecuación lingüística y evaluar los modelos en datos pertinentes; no estudian el corpus local propuesto. |
-| Cayra Uscamayta (2024) | Estudia contaminación ambiental y gestión de residuos sólidos en la Municipalidad Provincial de San Román. | Aporta contexto académico local; no constituye evidencia de clasificación de sentimientos en comentarios digitales. |
+| Pang et al. (2002), reseñas cinematográficas | Compara clasificadores supervisados de polaridad, incluido SVM. | Clasificación de sentimiento no implica integración en recomendación. |
+| Zheng et al. (2017), DeepCoNN | Integra reseñas de usuarios e ítems para predecir ratings. | Usa redes convolucionales; no es un Transformer ni mide polaridad directamente. |
+| Fadhlurrahman et al. (2023), reseñas de Steam | Contrasta BERT y BiLSTM-CRF en reseñas de videojuegos. | La clasificación no mide una recomendación personalizada posterior. |
+| Li et al. (2023), PEPLER; Xie et al. (2023), PRAG | Usan modelos preentrenados, reseñas y generación de explicaciones dentro de recomendación. | Evalúan rating y explicación con métricas distintas de clasificación sentimental. |
+| Ma et al. (2024), XRec | Combina señales colaborativas y LLM para explicar comportamiento usuario–ítem. | Explicabilidad no equivale a precisión de polaridad. |
+| Roumeliotis et al. (2026) | Compara LLM individuales, agregación y ensambles para sentimiento de reseñas de compra dentro de recomendación; reporta desempeño y costos. | La referencia de polaridad se deriva de ratings y el modelo depende de servicios cerrados. |
 
-El Documento 1 describe modelos preentrenados e híbridos, conjuntos de reseñas y dificultades relacionadas con datos, lenguaje informal y eficiencia. Su utilidad es técnica. Los 29 estudios que declara incluir pertenecen a su revisión original y no se contabilizan como estudios sobre limpieza pública en Juliaca.
+La matriz de la sesión 3 consigna datasets, protocolos, métricas y resultados extraídos. También muestra que las conclusiones no son directamente comparables sin atender a las etiquetas y a la tarea evaluada.
 
 ## E4. Brecha de investigación (research gap)
 
-**¿Qué se conoce actualmente?** Los antecedentes recogidos describen análisis de opiniones digitales sobre residuos, comparaciones de clasificadores en opiniones peruanas y evaluación de modelos de lenguaje en expresiones coloquiales del español peruano. En conjunto, fundamentan la pertinencia de una comparación contextualizada.
+**Brecha preliminar:** la evidencia se distribuye entre clasificación de sentimientos en reseñas, integración del texto en predicción de preferencias y generación de explicaciones/resúmenes. Hace falta una síntesis crítica y trazable que compare cómo se conectan esas etapas, qué señales de opinión usan los modelos de lenguaje y qué evidencia demuestra mejoras en la recomendación, junto con los costos, limitaciones y riesgos de fidelidad.
 
-**¿Qué aspecto permanece sin resolver?** La evidencia recopilada no permite establecer cómo difieren TF-IDF + SVM y un Transformer en español al clasificar el mismo conjunto de comentarios sobre limpieza pública y recojo de residuos en Juliaca. Los resultados de otros países, plataformas y dominios no resuelven esa comparación local.
+La brecha no afirma que no existan trabajos; la revisión incluye estudios directamente relacionados y uno de 2026 que evalúa sentimiento y ensambles en recomendación. La pregunta pendiente es cómo organizar y comparar esa evidencia con criterios metodológicos comunes, incluidos los artículos del borrador original que puedan verificarse. La conclusión se limita al corpus y estrategia documentados en la sesión 3.
 
-**Brecha identificada:** falta de evidencia comparativa suficiente, dentro del material documental disponible, sobre el desempeño de ambos enfoques bajo un corpus local, etiquetas de referencia y condiciones de evaluación comunes.
+## E5. Problema y pregunta de investigación
 
-Esta brecha es preliminar. No equivale a afirmar que no existen publicaciones sobre el tema. Para confirmarla será necesario ampliar y documentar la búsqueda bibliográfica. La disponibilidad del corpus constituye, además, una condición de factibilidad pendiente, distinta de la brecha científica.
+**Problema:** la evidencia sobre sentimientos, modelos de lenguaje y sistemas de recomendación se evalúa con tareas, datos y métricas diferentes, lo que dificulta reconocer cuándo el análisis sentimental mejora una predicción o explicación recomendadora y qué costos o limitaciones conlleva.
 
-## E5. Problema de investigación
+**Pregunta de investigación:** ¿Cómo se han aplicado y evaluado los modelos de lenguaje y el análisis de sentimientos en reseñas para apoyar sistemas de recomendación, qué datos y métricas se utilizan, y qué limitaciones y brechas reporta la literatura?
 
-### Formulación narrativa
+La pregunta es apropiada para una revisión, no para un experimento causal. Su población documental y criterios de búsqueda se delimitan en la sesión 3.
 
-Los antecedentes reunidos justifican el análisis de sentimientos en conversaciones sobre residuos y la comparación de clasificadores en español. Sin embargo, las diferencias entre sus datos y protocolos impiden determinar de antemano qué desempeño tendrán un clasificador tradicional y un Transformer sobre comentarios ciudadanos de Juliaca. Se requiere una comparación empírica que utilice datos pertinentes, etiquetas documentadas y una evaluación común, previa verificación de la factibilidad del corpus.
+## E6. Justificación
 
-### Pregunta de investigación
+**Científica.** La revisión organiza la relación entre clasificación sentimental y recomendación, separa evidencia sobre predicción, personalización, explicación y resumen, e identifica las condiciones bajo las cuales los resultados pueden compararse. Esto permite ubicar con precisión qué aporta cada familia de modelos y evita deducir valor recomendador a partir de F1 aislado.
 
-¿Qué diferencias de desempeño, medidas principalmente mediante macro-F1, presentan un clasificador TF-IDF + SVM y un modelo Transformer en español al clasificar sentimientos en comentarios ciudadanos sobre limpieza pública y recojo de residuos sólidos en Juliaca?
+**Metodológica.** El trabajo documenta la estrategia de búsqueda, selección y extracción de datos, registra las diferencias de métrica y formula una síntesis temática. La matriz facilita replicación y actualización; las limitaciones de los borradores se hacen explícitas en vez de convertir referencias incompletas en evidencia verificada.
 
-## E6. Justificación de la investigación
-
-### Justificación científica
-
-El estudio aportaría evidencia contextualizada sobre dos enfoques de clasificación aplicados a comentarios locales. Su contribución consistiría en establecer la magnitud y las características de las diferencias observadas, así como los errores frecuentes, sin asumir previamente la superioridad del Transformer. La comparación permitiría examinar los límites de aplicación de antecedentes procedentes de otros dominios.
-
-### Justificación tecnológica
-
-La investigación permitiría documentar un procedimiento de preparación, etiquetado y clasificación de comentarios, junto con la configuración y evaluación de los modelos. Una partición de prueba común y el registro de parámetros, versiones y decisiones de preprocesamiento favorecerían la reproducibilidad. Los resultados aportarían criterios para seleccionar un enfoque según su desempeño y viabilidad en las condiciones del proyecto.
-
-### Justificación práctica
-
-Si el corpus y la clasificación resultan viables, el procedimiento podría apoyar la organización inicial de comentarios para revisión humana. Su aporte dependerá de la cobertura y calidad de los datos. La clasificación describirá las opiniones expresadas en los comentarios analizados; no medirá directamente el estado de limpieza de la ciudad ni sustituirá la inspección municipal o la participación de residentes.
+**Práctica y tecnológica.** La síntesis puede orientar a equipos que desarrollan recomendadores basados en reseñas a elegir datos, señales, métricas y procedimientos de explicación apropiados. La revisión también organiza aspectos de costo y eficiencia cuando los estudios los reportan. Sus resultados no garantizan un aumento de satisfacción o calidad comercial; esa conclusión requeriría evaluación con usuarios y sistemas desplegados.
 
 ## E7. Referencias científicas utilizadas
 
-Referencias reproducidas a partir del Documento 2, pendientes de cotejo con las publicaciones originales. La lista de autores de Huang et al. se conserva abreviada porque el borrador no la proporciona completa.
+La lista completa y trazable de 12 trabajos se presenta en E9 de la sesión 3. Entre las fuentes centrales se encuentran Pang et al. (2002), Zheng et al. (2017), Li et al. (2023), Xie et al. (2023), Ma et al. (2024), Wu et al. (2024) y Roumeliotis et al. (2026). Se emplean las fichas de origen y DOI registradas en la matriz; los antecedentes incompletos del Documento 1 se mantienen pendientes hasta su verificación.
 
-1. Adrianzón Torres, M. J., & Escobedo Cárdenas, E. J. (2021). Análisis comparativo de métodos de machine learning para clasificar opiniones sobre el servicio de restaurantes peruanos en Facebook. En *Sociedad digital: retos y oportunidades de una nueva realidad. Actas del IV Congreso Internacional de Ingeniería de Sistemas* (pp. 67–81). Universidad de Lima. [DOI](https://doi.org/10.26439/ciis2021.5578).
-2. Calizaya-Milla, S. E., Santos, J., & Huanca Torres, F. A. (2026). Fine-tuning monolingual pre-trained BERT models for sentiment analysis in Peruvian slang contexts. *Applied Artificial Intelligence, 40*(1), artículo 2641381. [DOI](https://doi.org/10.1080/08839514.2026.2641381).
-3. Cayra Uscamayta, F. (2024). *La contaminación ambiental y la gestión de residuos sólidos en la Municipalidad Provincial de San Román Juliaca–2023* [Tesis, Universidad Privada San Carlos]. [Repositorio](http://repositorio.upsc.edu.pe/handle/UPSC/872).
-4. Huang, H., Zeng, X., Ge, L., et al. (2025). Social media engagement in waste sorting: The role of sentiment in shaping public awareness. *Humanities and Social Sciences Communications, 12*, artículo 1763. [DOI](https://doi.org/10.1057/s41599-025-06041-x).
-5. Jiang, P., Zhou, J., Fan, Y. V., Klemes, J. J., Zheng, M., & Varbanov, P. S. (2021). Data analysis of resident engagement and sentiments in social media enables better household waste segregation and recycling. *Journal of Cleaner Production, 319*, artículo 128809. [DOI](https://doi.org/10.1016/j.jclepro.2021.128809).
-6. Xue, Y., & Liu, H. (2023). Exploration of the dynamic evolution of online public opinion towards waste classification in Shanghai. *International Journal of Environmental Research and Public Health, 20*(2), artículo 1471. [DOI](https://doi.org/10.3390/ijerph20021471).
+## Control de avance
 
-## Lista de comprobación del avance
-
-- [x] Tema delimitado, con decisiones de factibilidad pendientes explícitas.
-- [x] Situación problemática formulada y vinculada con antecedentes descritos en los borradores.
-- [x] Evidencia bibliográfica organizada con sus límites de aplicación.
-- [x] Research gap preliminar explícito y derivado del material disponible.
-- [x] Pregunta investigable y coherente con la comparación propuesta.
-- [x] Justificación científica, tecnológica y práctica desarrollada.
-- [x] Referencias identificadas y procedencia documentada.
-- [ ] Consultar las publicaciones originales y completar los metadatos bibliográficos.
-- [ ] Confirmar la brecha mediante una búsqueda bibliográfica ampliada y documentada.
-- [ ] Confirmar fuente, periodo, volumen y condiciones de uso del corpus local.
+- [x] Tema y contexto delimitados al título original.
+- [x] Situación problemática formulada en términos de la síntesis de evidencia.
+- [x] Evidencia primaria localizada y límites explicitados.
+- [x] Brecha y pregunta de revisión formuladas sin declarar ausencia universal de trabajos.
+- [x] Justificaciones científica, metodológica y práctica.
+- [x] Referencias trazables a la sesión 3.

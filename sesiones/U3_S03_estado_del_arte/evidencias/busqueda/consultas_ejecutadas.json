@@ -1,251 +1,27 @@
-[
-  {
-    "id": "B01",
-    "fecha": "2026-10-31",
-    "interfaz": "buscador web; no exportación nativa",
-    "consultas": [
-      {
-        "q": "site.aclanthology.org 2022 \"RoBERTuito\""
-      },
-      {
-        "q": "site.aclanthology.org 2022 \"MarIA\""
-      },
-      {
-        "q": "site.aclanthology.org 2022 \"XLM-T\""
-      },
-      {
-        "q": "\"Huang\" \"2023\" \"waste\" \"BERT\" sentiment"
-      }
-    ]
-  },
-  {
-    "id": "B02",
-    "fecha": "2026-10-31",
-    "interfaz": "buscador web; no exportación nativa",
-    "consultas": [
-      {
-        "q": "\"MarIA\" \"2022\" \"Spanish\" language models"
-      },
-      {
-        "q": "\"BERTuit\" \"IEEE Access\" 2022"
-      },
-      {
-        "q": "\"Sentiment analysis methods, applications, and challenges\" 102048"
-      },
-      {
-        "q": "\"Huang\" \"2023\" \"waste sorting\" sentiment analysis"
-      }
-    ]
-  },
-  {
-    "id": "B03",
-    "fecha": "2026-10-31",
-    "interfaz": "buscador web; no exportación nativa",
-    "consultas": [
-      {
-        "q": "site.aclanthology.org \"Thumbs up?\" \"2002\""
-      },
-      {
-        "q": "site.aclanthology.org \"BERT: Pre-training\" \"2019\""
-      },
-      {
-        "q": "site.mdpi.com \"Exploration of the Dynamic Evolution\" 1471"
-      },
-      {
-        "q": "\"Juliaca\" \"sentimientos\" \"residuos\""
-      }
-    ]
-  },
-  {
-    "id": "B04",
-    "fecha": "2026-10-31",
-    "interfaz": "buscador web; no exportación nativa",
-    "consultas": [
-      {
-        "q": "site.dblp.org \"RoBERTuito\""
-      },
-      {
-        "q": "site.semanticscholar.org \"sentiment\" \"waste sorting\""
-      },
-      {
-        "q": "site.portal.core.edu.au/conf-ranks \"LREC\" \"2023\""
-      },
-      {
-        "q": "site.portal.core.edu.au/conf-ranks \"EMNLP\" \"NAACL\""
-      }
-    ]
-  },
-  {
-    "id": "B05",
-    "fecha": "2026-10-31",
-    "interfaz": "buscador web; no exportación nativa",
-    "consultas": [
-      {
-        "q": "LREC",
-        "domains": [
-          "portal.core.edu.au"
-        ]
-      },
-      {
-        "q": "EMNLP",
-        "domains": [
-          "portal.core.edu.au"
-        ]
-      },
-      {
-        "q": "NAACL",
-        "domains": [
-          "portal.core.edu.au"
-        ]
-      },
-      {
-        "q": "Applied Artificial Intelligence Humanities Social Sciences Communications Heliyon",
-        "domains": [
-          "scimagojr.com"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "B06",
-    "fecha": "2026-10-31",
-    "interfaz": "buscador web; no exportación nativa",
-    "consultas": [
-      {
-        "q": "\"MarIA: Spanish Language Models\" journal.sepln.org"
-      },
-      {
-        "q": "\"Exploration of the Dynamic Evolution of Online Public Opinion\" PMC"
-      },
-      {
-        "q": "\"Applied Artificial Intelligence\" \"2024\" \"Q2\" SJR"
-      },
-      {
-        "q": "\"Journal of King Saud University\" \"2024\" \"Q1\" SJR"
-      }
-    ]
-  },
-  {
-    "id": "B07",
-    "fecha": "2026-10-31",
-    "interfaz": "buscador web; no exportación nativa",
-    "consultas": [
-      {
-        "q": "\"Humanities and Social Sciences Communications\" SJR quartile",
-        "domains": [
-          "scimagojr.com"
-        ]
-      },
-      {
-        "q": "\"Heliyon\" SJR quartile",
-        "domains": [
-          "scimagojr.com"
-        ]
-      },
-      {
-        "q": "\"Procesamiento del Lenguaje Natural\" quartile",
-        "domains": [
-          "scimagojr.com"
-        ]
-      },
-      {
-        "q": "\"International Journal of Environmental Research and Public Health\" quartile",
-        "domains": [
-          "scimagojr.com"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "B08",
-    "fecha": "2026-10-31",
-    "interfaz": "buscador web; no exportación nativa",
-    "consultas": [
-      {
-        "q": "\"2641381\" \"Table 4\" \"F1\" ",
-        "domains": [
-          "tandfonline.com"
-        ]
-      },
-      {
-        "q": "\"2641381\" github huggingface",
-        "domains": [
-          "tandfonline.com"
-        ]
-      },
-      {
-        "q": "\"e38510\" accuracy precision F1",
-        "domains": [
-          "sciencedirect.com",
-          "pmc.ncbi.nlm.nih.gov"
-        ]
-      },
-      {
-        "q": "\"20021471\" \"SnowNLP\" \"50\" ",
-        "domains": [
-          "mdpi.com",
-          "pmc.ncbi.nlm.nih.gov"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "B09",
-    "fecha": "2026-10-31",
-    "interfaz": "buscador web; no exportación nativa",
-    "consultas": [
-      {
-        "q": "\"Exploration of the Dynamic Evolution of Online Public Opinion towards Waste Classification in Shanghai\" \"sentiment\" \"SnowNLP\""
-      },
-      {
-        "q": "\"How to go green?\" \"OCC-LSTM\" \"accuracy\""
-      },
-      {
-        "q": "\"MarIA: Spanish Language Models\" \"sentiment\" \"Table\""
-      },
-      {
-        "q": "\"Humanities and Social Sciences Communications\" \"2024\" \"Q1\""
-      }
-    ]
-  },
-  {
-    "id": "B10",
-    "fecha": "2026-10-31",
-    "interfaz": "buscador web; no exportación nativa",
-    "consultas": [
-      {
-        "q": "\"Exploration of the Dynamic Evolution\" \"sentiment analysis\"",
-        "domains": [
-          "mdpi.com",
-          "pmc.ncbi.nlm.nih.gov"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "B11",
-    "fecha": "2026-10-31",
-    "interfaz": "buscador web; no exportación nativa",
-    "consultas": [
-      {
-        "q": "(\"sentiment analysis\" OR \"opinion mining\") (\"waste collection\" OR \"waste sorting\") (SVM OR BERT) 2022 2026"
-      },
-      {
-        "q": "(\"Juliaca\" OR \"Puno\") (\"sentiment analysis\" OR \"análisis de sentimientos\") limpieza residuos"
-      },
-      {
-        "q": "\"RoBERTuito\" \"Peruvian\" \"2026\"",
-        "domains": [
-          "tandfonline.com"
-        ]
-      },
-      {
-        "q": "\"RoBERTuito\"",
-        "domains": [
-          "dblp.org",
-          "semanticscholar.org"
-        ]
-      }
-    ]
-  }
-]
+{
+  "fecha": "2026-11-01",
+  "interfaz": "buscador web",
+  "nota": "Registro de consultas ejecutadas por lotes. Se registran términos de búsqueda, no conteos de resultados; el buscador no devolvió una exportación bibliográfica completa.",
+  "lotes": [
+    {"id":"N01","consultas":["sentiment analysis review based recommender systems survey 2023 2024 language models","Steam game reviews aspect sentiment analysis BERT 2023 2024 2025 recommendation","review based recommendation sentiment language model 2024 2025 PETER PEPLER"]},
+    {"id":"N02","consultas":["sentiment analysis game review e35945","Factual and Informative Review Generation AAAI 2023","Personalized Prompt Learning Explainable Recommendation 2023","Joint Deep Modeling Users Items reviews recommendation 2017"]},
+    {"id":"N03","consultas":["Purbolaksono Heliyon 2024 sentiment analysis game review","Sentiment Analysis With Ensemble Hybrid Deep Learning Model Tan 2022","Transfer Learning for Sentiment Classification 5232 Sensors","Hierarchical Indexing for Retrieval-Augmented Opinion Summarization"]},
+    {"id":"N04","consultas":["XRec Large Language Models for Explainable Recommendation ACL 2024","Hybrid Quality-Based Recommender Systems systematic review 2025","sentiment analysis in recommender systems 2024 survey"]},
+    {"id":"N05","consultas":["Sentiment Analysis With Ensemble Hybrid Deep Learning Model PDF","A survey on large language models for recommendation Wu 2024","Joint Deep Modeling of Users and Items site:dl.acm.org","Personalized Prompt Learning site:dl.acm.org"]},
+    {"id":"N06","consultas":["sentiment recommender systems systematic survey 2024","large language models sentiment reviews recommendation","Steam sentiment Heliyon 2024","A Survey on Aspect-Based Sentiment Analysis Tasks Methods Challenges"]},
+    {"id":"N07","consultas":["A Large-Scale Empirical Study of LLM Orchestration and Ensemble Strategies for Sentiment Analysis in Recommender Systems 2026","Sentiment Analysis of Game Reviews on STEAM using BERT BiLSTM CRF authors results"]},
+    {"id":"N08","consultas":["WSDM AAAI CORE rankings","ACM Transactions on Information Systems AIS quartile","IEEE Transactions on Knowledge and Data Engineering AIS quartile","World Wide Web AIS quartile 2024"]},
+    {"id":"N09","consultas":["DeepCoNN WSDM 2017 proceedings pages DOI","A Large-Scale Empirical Study LLM Orchestration Future Internet 2026 authors","Areshey Mathkour Sensors 2023 5232"]}
+  ],
+  "fuentes_primarias_y_repositorios": [
+    "ACL Anthology: R01, R09, R10",
+    "ACM proceedings/repository: R02, R06",
+    "IEEE/author copy: R05, R08",
+    "AAAI Proceedings: R07",
+    "Springer Nature: R11",
+    "MDPI: R04, R12",
+    "Institutional repository abstract: R03"
+  ],
+  "snowballing": "Rastreos dirigidos en bibliografías y trabajos relacionados de DeepCoNN, PEPLER, XRec y el artículo de Steam. No representa un grafo completo de todos los citantes.",
+  "pendientes": ["Exportación nativa de bases académicas", "Cribado independiente por segundo lector", "Verificación de venue CORE/Scimago para ICEEI y algunas revistas"]
+}

@@ -1,156 +1,150 @@
 # Desarrollo — U3 Sesión 3: Estado del arte
 
-**Título de la investigación:** Comparación de modelos de procesamiento del lenguaje natural para clasificar sentimientos en comentarios ciudadanos sobre la limpieza pública y el recojo de residuos sólidos en Juliaca, Puno
+**Título de la investigación:** Análisis de Sentimientos con Modelos de Lenguaje para Sistemas de Recomendación: Una Revisión Sistemática de la Literatura
 
-**Autor:** Yoseth Orlando Llave Huachaca
+**Autor:** Yoseth Orlando Llave Huachaca  
+**Curso:** Investigación III — Universidad Peruana Unión  
+**Fecha de corte:** 1 de noviembre de 2026  
+**Estado:** protocolo y síntesis bibliográfica documentados; borrador para integrar al Perfil de Proyecto de Investigación.
 
-**Curso:** Investigación III — Universidad Peruana Unión
+## Alcance del producto
 
-**Fecha de corte:** 31 de octubre de 2026
+Esta versión conserva el título original del Documento 1. Examina el análisis de sentimientos en reseñas con modelos de lenguaje y su relación con sistemas de recomendación. Distingue clasificación de polaridad, predicción de rating/ranking, recomendación explicable y resumen de opiniones. No se afirma que una mejora en clasificación produzca automáticamente mejores recomendaciones.
 
-**Delimitación metodológica:** clasificación de sentimientos en comentarios sobre limpieza pública y recojo de residuos sólidos en Juliaca mediante TF-IDF + SVM y un Transformer en español.
-
-**Estado del producto:** borrador académico con revisión bibliográfica estructurada de 11 publicaciones. La búsqueda externa amplía los dos documentos iniciales conforme a la actividad de esta sesión. No se declara una RSL exhaustiva concluida ni se presentan resultados experimentales propios. La cobertura y los accesos pendientes se documentan para su posterior ampliación.
+Se seleccionaron 12 trabajos científicos, incluidos dos antecedentes seminales, dos surveys y diez publicaciones recientes (2022–2026; 83,3 % del corpus). Se aplicaron criterios explícitos de búsqueda, elegibilidad y extracción. El resultado constituye una revisión sistemática de literatura en desarrollo: faltan exportaciones de bases nativas y una segunda persona para reproducir el cribado, por lo que no se declara cierre exhaustivo tipo PRISMA.
 
 ## E1. Estrategia y registro de búsqueda
 
-### Pregunta que orienta la revisión
+### Pregunta de revisión
 
-¿Qué diferencias de desempeño, medidas principalmente mediante macro-F1, presentan un clasificador TF-IDF + SVM y un modelo Transformer en español al clasificar sentimientos en comentarios ciudadanos sobre limpieza pública y recojo de residuos sólidos en Juliaca?
+¿Cómo se han aplicado y evaluado los modelos de lenguaje y el análisis de sentimientos en reseñas para apoyar sistemas de recomendación, qué datos y métricas se utilizan, y qué limitaciones y brechas reporta la literatura?
 
-Se conserva la pregunta de la [sesión 2](../U3_S02_objetivos_hipotesis_variables/desarrollo.md). Para fundamentarla se examinaron métodos, adaptación lingüística, aplicaciones a residuos y condiciones de evaluación. El propósito documental es establecer qué puede transferirse al proyecto y qué exige comprobación local.
+Se empleó PICOC para cubrir reseñas, análisis sentimental/modelos de lenguaje, comparadores tradicionales e híbridos, métricas de sentimiento/recomendación/explicación y plataformas de productos o contenidos digitales. Se combinaron términos en inglés y español sobre sentiment analysis, opinion mining, online reviews, BERT/Transformer/LLM, recommender systems, recommendation, Steam, Amazon, Yelp, explainable recommendation y opinion summarization.
 
-La búsqueda combinó «sentiment analysis», «opinion mining», «SVM», «TF-IDF», «BERT», «Transformer», «Spanish», «Peruvian slang», «waste collection», «waste sorting», «Juliaca» y «Puno». Se consultaron fuentes primarias editoriales y repositorios académicos mediante búsquedas generales y por dominio. Se realizó rastreo hacia atrás desde P10 y P03, y hacia adelante desde P03, verificando las referencias de los trabajos recuperados.
+La [estrategia de búsqueda](evidencias/busqueda/estrategia_registro.md) conserva PICOC, cadenas por bloques, ventana, etapas, snowballing y candidatos pendientes. Las [consultas ejecutadas](evidencias/busqueda/consultas_ejecutadas.json) registran búsquedas por frase, DOI, dominio y fuente primaria. Se documenta lo efectivamente consultado; no se inventan exportaciones ni recuentos de bases que no se obtuvieron.
 
-El [registro de búsqueda](evidencias/busqueda/estrategia_registro.md) contiene cadenas, vías de acceso, candidatos y límites. Las [consultas literales](evidencias/busqueda/consultas_ejecutadas.json) permiten repetir las búsquedas. DBLP y Semantic Scholar no proporcionaron exportaciones por restricciones de acceso; no se atribuyen búsquedas nativas a bases no utilizadas ni se inventan recuentos de resultados.
+## E2. Criterios de selección y calidad
 
-## E2. Criterios de selección y evaluación de calidad
+Se incluyeron trabajos con metadatos verificables y suficiente información sobre sentimiento en reseñas, integración textual en recomendación, explicación/síntesis basada en opiniones o surveys de esas tareas. La ventana fue 2022–2026. Pang et al. (2002) y Zheng et al. (2017) se admitieron por su papel fundacional en clasificación sentimental y recomendación con reseñas. Se conservaron publicaciones en inglés porque el campo y sus benchmarks son multilingües.
 
-Se priorizaron artículos de revista, full papers y surveys publicados entre 2022 y 2026, pertinentes al método, idioma o dominio. Se admitieron dos antecedentes seminales anteriores. La síntesis incluye **11 publicaciones: 9 recientes (81,8 %) y 2 seminales**. Los rankings y recursos de consulta no entran en ese denominador.
+La evaluación considera pertinencia, método/datos, validez de etiquetas, partición y métrica, limitaciones, disponibilidad declarada y venue. No se sumaron puntos de calidad sin justificación. La categoría del venue, índice y año deben quedar identificados; cuando no se verificó una categoría de ranking, se dice así y se utiliza un juicio reservado. Véase [criterios de calidad](evidencias/busqueda/criterios_calidad.md).
 
-Se verificaron venues mediante CORE, SJR u otros indicadores identificados explícitamente. Se evaluaron además claridad del corpus, métricas, referencia de anotación, transferibilidad y recursos de reproducción. Un venue reconocido no elimina limitaciones metodológicas. Los índices, categorías y años, así como las diferencias históricas de clasificación, constan en [criterios y calidad](evidencias/busqueda/criterios_calidad.md).
-
-Las métricas de entrenamiento se distinguen de las de prueba; «no verificado» no se interpreta como «inexistente». Se mantuvieron fuera del corpus los candidatos sin extracción suficiente y se registraron sus motivos. La selección fue una revisión documental de esta sesión, sin doble cribado independiente.
+El corpus final tiene **12 publicaciones: 10 de 2022–2026 (83,3 %) y dos seminales**. El denominador cuenta publicaciones únicas, no versiones espejo ni artículos encontrados en abstract. La tabla registra un candidato Steam 2026 pendiente y el estudio general de Tan et al. (2022) como adyacente, fuera del conteo principal.
 
 ## E3. Matriz de síntesis
 
-La [matriz completa de once artículos](evidencias/matrices/matriz_sintesis.md) contiene autores, año, problema, método, dataset, métricas, resultados, limitaciones, disponibilidad de recursos y localizadores primarios. Cada trabajo tiene un identificador P01–P11 que se conserva en la bibliografía y la taxonomía.
+La [matriz de R01–R12](evidencias/matrices/matriz_sintesis.md) incluye propósito, modelo, dataset, tipo de etiqueta, tarea, métrica, resultados extraídos, limitaciones y fuente primaria. `NR` significa no reportado o no verificado en el pasaje consultado. No se descargaron o ejecutaron códigos/datasets de terceros; las disponibilidades se califican como declaraciones del artículo.
 
-La matriz separa evidencia de rendimiento y evidencia de aplicación social. No se obtiene un promedio de puntuaciones entre estudios porque los corpus, etiquetas y métricas no son homogéneos.
+### E4. Antecedentes seminales y surveys
 
-## E4. Papers seminales y survey
+- **R01 — Pang, Lee y Vaithyanathan (2002):** antecedente fundacional para clasificación supervisada de polaridad en reseñas. Establece la línea histórica de clasificación, pero no integra sentimientos en recomendación.
+- **R02 — Zheng, Noroozi y Yu (2017):** DeepCoNN es antecedente fundacional de usar reseñas textuales para representar usuario e ítem en predicción recomendadora. No se describe como Transformer ni como clasificador de polaridad.
+- **R08 — Zhang et al. (2023):** survey de análisis sentimental por aspecto, que permite distinguir sentimiento general de opiniones asociadas a características.
+- **R11 — Wu et al. (2024):** survey más directo sobre LLM y recomendación, con familias discriminativas/generativas y retos del campo.
 
-**P01 — Pang, Lee y Vaithyanathan (2002):** fundamenta la comparación supervisada de sentimientos y la inclusión de SVM como referencia. Su reconocimiento Test-of-Time aparece en la ficha oficial de ACL. El estudio utiliza representaciones que no deben identificarse automáticamente con TF-IDF. [Fuente primaria](https://aclanthology.org/W02-1011/).
+Los dos surveys complementan funciones distintas: tareas de sentimiento por aspecto y arquitectura de recomendación. Ninguno presenta un resultado experimental único que pueda compararse con los clasificadores.
 
-**P02 — Devlin et al. (2019):** fundamenta el preentrenamiento bidireccional y el ajuste posterior que sustentan los modelos contextuales. Su relevancia para la línea revisada se observa también en las referencias de trabajos posteriores. [Fuente primaria](https://aclanthology.org/N19-1423/).
+## E5. Taxonomía o mapa de literatura
 
-**P07 — Mao, Liu y Zhang (2024):** survey seleccionado para organizar familias metodológicas y desafíos. Su función es sintetizar el campo, no aportar un clasificador propio a la comparación. [Fuente primaria](https://doi.org/10.1016/j.jksuci.2024.102048).
+La [taxonomía](evidencias/mapas/taxonomia.md) ordena la secuencia conceptual desde la reseña hasta la recomendación:
 
-La condición seminal se justifica por la contribución fundacional y continuidad metodológica, no únicamente por antigüedad o cantidad de citas.
-
-## E5. Taxonomía o mapa de la literatura
-
-La [taxonomía desarrollada](evidencias/mapas/taxonomia.md) organiza cuatro categorías:
-
-| Categoría | Trabajos | Función en el argumento |
+| Categoría | Trabajos | Objeto principal |
 |---|---|---|
-| Fundamentos de clasificación | P01, P02 | Explicar las familias comparadas. |
-| Adaptación al idioma, plataforma y variedad | P03, P04, P05, P10 | Fundamentar la selección del Transformer y el problema de transferencia. |
-| Opinión digital sobre residuos | P06, P08, P09, P11 | Establecer pertinencia temática y límites de interpretación. |
-| Síntesis metodológica | P07 | Relacionar enfoques y retos. |
+| Clasificación sentimental de reseñas | R01, R03–R05, R12 | Predecir polaridad; en algunos estudios la etiqueta se deriva del rating. |
+| Texto de reseñas dentro del recomendador | R02, R06–R07, R10, R12 | Estimar rating/preferencia y combinar texto con señales de usuario e ítem. |
+| Explicaciones y resúmenes de opinión | R06–R10 | Comunicar motivos o sintetizar evidencia textual. |
+| Síntesis del campo | R08, R11 | Organizar tareas, arquitecturas y desafíos. |
 
-El mapa incluye evolución temporal, proximidad al proyecto y relaciones de citación verificadas. Es una elaboración conceptual propia, no un grafo de cocitación automatizado.
+Las categorías se pueden cruzar, pero sus salidas y métricas no son intercambiables. El mapa describe el corpus seleccionado, no una clasificación exhaustiva del campo entero.
 
-## E6. Categorías temáticas y análisis crítico
+## E6. Análisis crítico por categorías
 
-El desarrollo argumentado por categorías se presenta en E8. Su lectura transversal conduce a los siguientes criterios para el proyecto:
+### 1. Clasificación del sentimiento en reseñas
 
-| Eje crítico | Evidencia del corpus | Consecuencia metodológica propuesta |
-|---|---|---|
-| Comparabilidad | P01–P04 y P08–P10 emplean distintos corpus, métricas o niveles de evaluación. | Usar etiquetas y prueba comunes; macro-F1 principal y resultados por clase. |
-| Transferencia | La proximidad lingüística de P03–P05/P10 y la temática de P06/P08/P09/P11 no coinciden plenamente. | Verificar adecuación en comentarios del servicio de limpieza local. |
-| Anotación | P10 explicita una limitación del acuerdo; las aplicaciones temáticas no siempre ofrecen validación clasificatoria suficiente. | Pilotar una guía de etiquetado y documentar consistencia antes de evaluar. |
-| Interpretación | Los estudios de residuos analizan polaridad, temas o difusión, que son objetos diferentes. | Separar error del modelo, distribución de opiniones y calidad real del servicio. |
-| Reproducción | Hay recursos declarados, pero no se ejecutaron artefactos en esta revisión. | Registrar versiones, particiones y configuraciones del futuro experimento. |
+R01 introduce una comparación supervisada clásica. R03 explora ensambles de RoBERTa y recurrentes sobre varios datasets; R04 compara SVM y BERT en reseñas Yelp etiquetadas mediante extremos del rating; R05 estudia reseñas de Steam con BERT y variantes recurrentes; R12 evalúa ensambles de LLM en sentimiento vinculado a compras. Estos trabajos muestran que hay más de una estrategia y que los resultados cambian con dominio, etiqueta, configuración y protocolo.
 
-Estas decisiones son propuestas del equipo derivadas del contraste; no se atribuyen como recomendaciones textuales a todos los autores. La revisión no demuestra cuál es el mejor modelo disponible globalmente en 2026.
+Las métricas F1 y accuracy de distintos conjuntos no ordenan modelos de manera válida. Si los ratings se convierten a polaridad, la etiqueta es un proxy de la valoración y puede ocultar ironía, opiniones mixtas o diferencias entre aspectos. El estudio de Steam da proximidad a juegos, pero no compara directamente SVM ni prueba que sus etiquetas eleven la utilidad de una recomendación. R12 añade costo, aunque evalúa modelos propietarios y los resultados se ligan al precio y versiones disponibles al momento del experimento.
+
+### 2. Incorporación de reseñas en recomendaciones
+
+DeepCoNN modela reseñas de usuario e ítem y predice ratings. PEPLER adapta modelos preentrenados con prompts para recomendación explicable, y PRAG recupera reseñas para producir justificaciones y estimar rating. XRec combina señales colaborativas y capacidad lingüística para explicar perfiles. R12 acerca sentimiento y recomendación mediante reseñas y etiquetas derivadas de estrellas.
+
+Los artículos orientados a rating informan RMSE/MSE; los de clasificación informan accuracy/F1. Una disminución del error de rating no indica necesariamente mejor clasificación sentimental, y al revés. Para sostener que el análisis de sentimientos contribuye al sistema, el estudio debe evaluar también el resultado recomendador con comparadores pertinentes y describir la señal textual utilizada.
+
+### 3. Explicación y síntesis de opiniones
+
+PEPLER, PRAG y XRec generan explicaciones en contexto recomendador. HIRO selecciona grupos de reseñas y produce resúmenes fundamentados; no estima por sí solo qué ítem recomendar. Zhang et al. sitúan la extracción de aspectos y polaridad como una tarea más fina. Las explicaciones requieren medir fidelidad a reseñas, cobertura y utilidad legible; fluidez lingüística por sí sola no confirma que la explicación sea verdadera.
+
+### 4. Síntesis de surveys
+
+Zhang et al. organiza elementos de sentimiento por aspecto, mientras Wu et al. clasifica paradigmas de LLM para recomendación. Sus ámbitos complementarios ayudan a explicar por qué el corpus es heterogéneo. La síntesis de esta revisión, por lo tanto, conserva la tarea exacta de cada resultado y no calcula una puntuación promedio entre estudios.
 
 ## E7. Brecha de investigación sustentada
 
-**Brecha:** en el corpus seleccionado no se identificó una evaluación directamente equivalente que compare TF-IDF + SVM con un Transformer en español sobre el mismo conjunto de comentarios de limpieza pública y recojo de residuos de Juliaca, con referencia de anotación documentada y macro-F1 como resultado principal.
+**Brecha del estado del arte:** los estudios se distribuyen entre (a) clasificar el sentimiento de reseñas, (b) incorporar texto para estimar ratings/recomendaciones y (c) explicar o resumir opiniones. La relación empírica entre esos eslabones aún requiere una síntesis comparativa y trazable que identifique cuándo la señal sentimental aporta al resultado downstream y cómo se ponderan calidad, fidelidad, dominio, costo y eficiencia.
 
-La brecha combina tres dimensiones. Los fundamentos justifican comparar familias distintas (P01–P02); los modelos de español y la evidencia peruana muestran antecedentes lingüísticos pertinentes (P03–P05, P10); las aplicaciones a residuos aportan evidencia temática en otros contextos (P06, P08, P09, P11). Ninguna de esas dimensiones, por sí sola, responde a la pregunta local. Esta conclusión es una inferencia acotada a la matriz, no una afirmación de inexistencia universal.
+La brecha se acota con evidencia concreta: R01 y R03–R05 miden clasificación; R02 y R06–R07 evalúan recomendación y explicaciones; R09 resume opiniones; R10 usa señales colaborativas para explicar; R12 examina ensambles de sentimiento, métricas recomendadoras/costo y deriva etiqueta desde rating. R12 aproxima los objetivos, por lo que el vacío no es “ausencia de estudios”: falta organizar las diferencias de supervisión y tarea, identificar qué mejoras son comparables y precisar los límites que impiden generalizar. Es una inferencia limitada al corpus de 12 trabajos y a la estrategia documentada.
 
-**Diferenciación de la propuesta:** producir evidencia comparativa contextual con un protocolo compartido, no proponer una arquitectura inédita. Se prevé caracterizar el corpus y su anotación (OE1), evaluar ambos procedimientos (OE2), estimar la diferencia de macro-F1 y su incertidumbre (OE3) y examinar errores por clase (OE4). Se conserva la hipótesis bilateral de la sesión 2: la literatura no autoriza a dar por ganadora una familia.
+**Diferenciación del proyecto:** auditar y sintetizar la relación entre sentimiento y recomendación en una revisión sistemática, distinguiendo polaridad, predicción recomendadora, explicación y resumen. No se propone una arquitectura ni se presupone que Transformers o LLM superen a métodos clásicos.
 
-Quedan por confirmar la fuente, el periodo, el volumen viable del corpus y el Transformer concreto. La presencia de jerga, mezcla de idiomas o ironía deberá observarse y registrarse, no suponerse. Las conclusiones se limitarán a los comentarios analizados, sin equipararlos a una encuesta representativa de toda Juliaca.
-
-## E8. Borrador de introducción y estado del arte para el PPI
+## E8. Borrador de introducción y estado del arte
 
 ### Introducción
 
-Los comentarios digitales sobre servicios municipales constituyen una posible fuente de información acerca de las experiencias y valoraciones expresadas por sus usuarios. Su aprovechamiento exige distinguir la tarea de identificar sentimientos de la posterior interpretación de esas opiniones. En el ámbito de los residuos, la literatura reúne análisis de polaridad, organización temática y difusión de mensajes, con objetivos que no siempre incluyen comparar la capacidad predictiva de los clasificadores. Por ello, la existencia de aplicaciones en ese dominio no basta para seleccionar un procedimiento de clasificación adecuado para otro contexto lingüístico y territorial. [P06](https://doi.org/10.3390/ijerph20021471), [P09](https://doi.org/10.1057/s41599-025-06041-x).
+Las reseñas digitales reúnen valoraciones sobre productos y servicios en forma de texto libre y, con frecuencia, ratings numéricos. Los sistemas de recomendación pueden utilizar la interacción usuario–ítem y la información expresada en reseñas para predecir preferencias, ordenar opciones o presentar explicaciones. Los modelos de lenguaje aportan representaciones contextuales y capacidad para generar explicaciones, mientras que el análisis de sentimientos transforma expresiones valorativas en etiquetas o señales que pueden integrarse en esos sistemas.
 
-En Juliaca, el proyecto propone comparar TF-IDF + SVM y un Transformer en español sobre comentarios relacionados con limpieza pública y recojo de residuos. Esta delimitación plantea un problema computacional verificable: determinar cómo difieren sus predicciones frente a una referencia común. No presupone que el volumen de comentarios represente la opinión de toda la ciudadanía ni que el sentimiento permita medir directamente la calidad objetiva del servicio.
+Estas actividades están relacionadas, pero responden a preguntas distintas. Un clasificador puede predecir polaridad con buen F1 y, aun así, no mejorar el orden de recomendaciones. Un sistema puede obtener menor RMSE sin identificar correctamente los aspectos que sustentan la opinión. Una explicación puede ser fluida y no estar apoyada por las reseñas. Por ello, la literatura debe compararse según la tarea, las etiquetas, el conjunto de datos y la métrica que realmente se evalúan.
 
-La revisión se organiza alrededor de fundamentos de clasificación, adaptación lingüística y aplicaciones a residuos. Su finalidad es identificar aportes transferibles y limitaciones que orienten el protocolo experimental. La contribución prevista será una comparación contextual documentada, cuya viabilidad dependerá de la disponibilidad y calidad del corpus local.
+Esta revisión analiza estudios sobre análisis de sentimiento y modelos de lenguaje aplicados a reseñas en el contexto de recomendación. Organiza la evidencia en clasificación, integración recomendadora, explicabilidad y síntesis de opiniones. La revisión busca determinar qué aportes pueden transferirse, cómo se ha demostrado su utilidad y qué limitaciones impiden comparar o reproducir resultados.
 
-### 1. Fundamentos: representaciones de palabras y modelos contextuales
+### Modelos para clasificar sentimientos en reseñas
 
-El antecedente de Pang et al. sitúa la clasificación de sentimientos dentro de la comparación de procedimientos supervisados, mientras que BERT representa el uso de preentrenamiento contextual y ajuste a tareas. Ambos justifican familias de candidatos, pero no permiten deducir de antemano su desempeño en el mismo problema local. [P01](https://aclanthology.org/W02-1011/), [P02](https://aclanthology.org/N19-1423/).
+La línea de clasificación va desde la comparación supervisada de Pang et al. hasta ensambles neuronales y Transformers. Los estudios contemporáneos abarcan Yelp, Steam y reseñas asociadas a ratings. Aunque sus puntuaciones de F1 o accuracy ilustran el desempeño en cada caso, difieren en idioma, balance, fuente de etiquetas, configuración y partición. En particular, la derivación de positivo/negativo a partir de ratings no equivale a la anotación directa de cada expresión. Los resultados sirven como evidencia de clasificación contextualizada; por sí solos no prueban impacto en recomendación.
 
-La comparación propuesta deberá conservar una línea base definida con precisión. No bastará denominarla «SVM»: habrá que especificar su representación TF-IDF y sus parámetros, del mismo modo que se documentará el Transformer. La síntesis de Mao et al. ayuda a situar estas decisiones entre familias metodológicas diversas; esa diversidad exige evaluar la pertinencia de cada enfoque y evita presentar una secuencia tecnológica como una garantía de superioridad. [P07](https://doi.org/10.1016/j.jksuci.2024.102048).
+La reseña de videojuegos es especialmente pertinente al enfoque original del título. El estudio de Steam contrasta BERT con variantes recurrentes en juegos populares, pero no evalúa cómo las predicciones modificarían decisiones de recomendación. A su vez, estudios de datasets generales ofrecen conjuntos comparativos más amplios, aunque la transferencia a jerga, ironía y comunidades de videojuegos no debe suponerse.
 
-### 2. Adaptación al español y al texto social
+### Integración del texto en recomendadores
 
-RoBERTuito y XLM-T orientan la revisión hacia modelos adaptados a redes sociales, mientras que MarIA aporta recursos construidos desde texto web en español. La distinción entre idioma y plataforma es relevante: compartir lengua no significa compartir distribución textual. Además, MarIA se evalúa en tareas que no incluyen directamente el sentimiento de este proyecto. [P03](https://aclanthology.org/2022.lrec-1.785/), [P04](https://aclanthology.org/2022.lrec-1.27/), [P05](https://doi.org/10.26342/2022-68-3).
+DeepCoNN establece una vía temprana: aprender representaciones de usuarios y productos a partir de las reseñas y utilizarlas en predicción de rating. Los modelos posteriores como PEPLER y PRAG integran modelos de lenguaje y estructuras personalizadas para estimar ratings y producir explicaciones. XRec incorpora una señal colaborativa a LLM para describir perfiles y explicar interacciones. Estos estudios se evalúan por tareas recomendadoras y de generación; su resultado no puede resumirse como si fuera precisión de polaridad.
 
-El estudio de Calizaya-Milla et al. aporta un antecedente más cercano a la variedad peruana, pero mantiene abierta la comparación con una línea base clásica y la validación específica del servicio municipal. Su limitación de acuerdo entre anotadores también recuerda que evaluar modelos requiere examinar la calidad de la referencia humana. [P10](https://doi.org/10.1080/08839514.2026.2641381).
+El estudio reciente de Roumeliotis et al. conecta más explícitamente sentimiento y recomendación al comparar LLM, agregadores y ensambles sobre reseñas con rating. Aporta un análisis de exactitud y costos. Sin embargo, el rating de estrellas funciona como etiqueta indirecta y los servicios cerrados vuelven sensibles al tiempo la identidad del modelo y su costo. Esta evidencia ilustra la necesidad de registrar la procedencia de etiquetas, el modelo exacto y la fecha de evaluación.
 
-La selección del Transformer se realizará antes de observar el conjunto de prueba. Su elección debe responder a pertinencia y viabilidad; probar múltiples candidatos y conservar el que mejor funcione en test invalidaría la independencia de esa evaluación. La transferencia lingüística se tratará como una cuestión empírica y no como una propiedad asegurada por el nombre del modelo.
+### Explicaciones y resúmenes fundamentados en reseñas
 
-### 3. Sentimientos y opinión pública en gestión de residuos
+En recomendación explicable, PEPLER, PRAG y XRec buscan comunicar por qué una opción corresponde a un perfil. HIRO aborda una tarea cercana: condensar opiniones de muchas reseñas mediante selección jerárquica de evidencia y generación. El survey de Zhang et al. aporta granularidad por aspecto. En conjunto, estos trabajos muestran que personalizar una recomendación y resumir opiniones no son sinónimos. La evaluación de una explicación debe considerar que sus afirmaciones sean rastreables a reseñas, además de legibles y específicas.
 
-En esta línea coexisten aproximaciones léxicas, redes recurrentes, Transformers y herramientas preentrenadas. Xue y Liu y Chen et al. combinan polaridad y temas; Sui y Zhang incorporan OCC-LSTM; Huang et al. vinculan clasificación con difusión de información. La variedad revela finalidades analíticas distintas, además de diferencias técnicas. [P06](https://doi.org/10.3390/ijerph20021471), [P11](https://doi.org/10.3389/fenvs.2025.1546136), [P08](https://doi.org/10.1016/j.heliyon.2024.e38510), [P09](https://doi.org/10.1057/s41599-025-06041-x).
+### Síntesis crítica
 
-El contraste exige atender al origen de cada indicador. Una distribución de mensajes positivos o negativos describe las etiquetas producidas; no verifica su corrección. Asimismo, la accuracy de entrenamiento destacada en P08 no constituye evidencia suficiente de generalización. Estas diferencias impiden construir una tabla de ganadores sumando o comparando directamente porcentajes de los artículos.
+Wu et al. organiza el uso de LLM para recomendación en paradigmas distintos y ayuda a situar estos estudios dentro de un área amplia. El survey de ABSA complementa esa taxonomía al enfocarse en elementos de opinión. La matriz de esta revisión muestra que los resultados provienen de tareas, supervisiones y objetivos heterogéneos; no corresponde comparar métricas agregadas sin armonizar datos y protocolo.
 
-Para el proyecto, la utilidad temática de estas aplicaciones es distinta de su transferibilidad experimental. Las políticas de separación de residuos y los comentarios sobre recojo municipal pueden compartir vocabulario, pero no necesariamente el objeto de valoración. Será necesario definir en la guía si se etiqueta el servicio, una autoridad, una conducta ciudadana u otro objetivo expresado en el comentario; de lo contrario, una misma frase podría recibir etiquetas incompatibles.
+La contribución esperada de la revisión es clarificar la cadena entre reseña, señal sentimental y recomendación. Su brecha consiste en la integración insuficientemente sintetizada de desempeño sentimental, resultado downstream, fidelidad de explicación y costo. El estudio de 2026 ya aborda parte de esa intersección; por ello, la agenda debe identificar qué componentes quedan separados y qué evidencia es todavía incomparable, en vez de afirmar que no hay investigaciones relacionadas.
 
-### 4. Síntesis crítica y ubicación de la propuesta
+## E9. Referencias del corpus
 
-La literatura seleccionada aproxima por separado los métodos, la variedad lingüística y el dominio. La pregunta del proyecto se sitúa en su intersección y requiere una comparación común que la revisión no encontró dentro del corpus analizado. El aporte esperado consiste en producir esa evidencia bajo condiciones explícitas, con análisis de errores y alcance contextual delimitado.
+**R01.** Pang, B., Lee, L., & Vaithyanathan, S. (2002). Thumbs up? Sentiment Classification using Machine Learning Techniques. *Proceedings of EMNLP*, 79–86. [DOI: 10.3115/1118693.1118704](https://doi.org/10.3115/1118693.1118704).
 
-El protocolo deberá impedir contaminación entre entrenamiento y prueba, ajustar el vectorizador únicamente con entrenamiento y considerar la dependencia entre comentarios de una misma publicación. También deberá fijar el procedimiento de comparación y de incertidumbre antes de examinar los resultados finales. Estas son decisiones metodológicas propuestas para responder a las limitaciones observadas, no resultados de esta revisión.
+**R02.** Zheng, L., Noroozi, V., & Yu, P. S. (2017). Joint Deep Modeling of Users and Items Using Reviews for Recommendation. *Proceedings of WSDM*, 425–434. [DOI: 10.1145/3018661.3018665](https://doi.org/10.1145/3018661.3018665).
 
-La revisión permite justificar el estudio sin anticipar su conclusión. Una ventaja del Transformer, una diferencia pequeña o un resultado favorable a SVM serían hallazgos interpretables si proceden de un diseño consistente. La pertinencia del proyecto depende de esa calidad comparativa y de su información contextual, no de confirmar una superioridad previamente asumida.
+**R03.** Tan, K. L., Lee, C. P., Lim, K. M., & Anbananthen, K. S. M. (2022). Sentiment Analysis With Ensemble Hybrid Deep Learning Model. *IEEE Access, 10*, 103694–103704. [DOI: 10.1109/ACCESS.2022.3210182](https://doi.org/10.1109/ACCESS.2022.3210182).
 
-## E9. Referencias científicas utilizadas
+**R04.** Areshey, A., & Mathkour, H. (2023). Transfer Learning for Sentiment Classification Using Bidirectional Encoder Representations from Transformers (BERT) Model. *Sensors, 23*(11), 5232. [DOI: 10.3390/s23115232](https://doi.org/10.3390/s23115232).
 
-Los códigos sirven como enlaces entre las evidencias; el orden es metodológico-temático. Se utiliza el año de publicación formal.
+**R05.** Fadhlurrahman, J. A. M., Herawati, N. A., Aulya, H. R. W., Puspasari, I., & Utama, N. P. (2023). Sentiment Analysis of Game Reviews on STEAM using BERT, BiLSTM, and CRF. *2023 International Conference on Electrical Engineering and Informatics (ICEEI)*, 1–6. [DOI: 10.1109/ICEEI59426.2023.10346219](https://doi.org/10.1109/ICEEI59426.2023.10346219).
 
-**P01.** Pang, B., Lee, L., & Vaithyanathan, S. (2002). Thumbs up? Sentiment Classification using Machine Learning Techniques. *Proceedings of EMNLP*, 79–86. [DOI: 10.3115/1118693.1118704](https://doi.org/10.3115/1118693.1118704).
+**R06.** Li, L., Zhang, Y., & Chen, L. (2023). Personalized Prompt Learning for Explainable Recommendation. *ACM Transactions on Information Systems, 41*(4), Article 111. [DOI: 10.1145/3580488](https://doi.org/10.1145/3580488).
 
-**P02.** Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2019). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. *Proceedings of NAACL-HLT, Volume 1*, 4171–4186. [DOI: 10.18653/v1/N19-1423](https://doi.org/10.18653/v1/N19-1423).
+**R07.** Xie, Z., Singh, S., McAuley, J., & Majumder, B. P. (2023). Factual and Informative Review Generation for Explainable Recommendation. *Proceedings of AAAI, 37*(11), 13816–13824. [DOI: 10.1609/aaai.v37i11.26618](https://doi.org/10.1609/aaai.v37i11.26618).
 
-**P03.** Pérez, J. M., Furman, D. A., Alonso Alemany, L., & Luque, F. M. (2022). RoBERTuito: a pre-trained language model for social media text in Spanish. *Proceedings of LREC*, 7235–7243. [ACL Anthology](https://aclanthology.org/2022.lrec-1.785/).
+**R08.** Zhang, W., Li, X., Deng, Y., Bing, L., & Lam, W. (2023). A Survey on Aspect-Based Sentiment Analysis: Tasks, Methods, and Challenges. *IEEE Transactions on Knowledge and Data Engineering, 35*(11), 11019–11038. [DOI: 10.1109/TKDE.2022.3230975](https://doi.org/10.1109/TKDE.2022.3230975).
 
-**P04.** Barbieri, F., Espinosa Anke, L., & Camacho-Collados, J. (2022). XLM-T: Multilingual Language Models in Twitter for Sentiment Analysis and Beyond. *Proceedings of LREC*, 258–266. [ACL Anthology](https://aclanthology.org/2022.lrec-1.27/).
+**R09.** Hosking, T., Tang, H., & Lapata, M. (2024). Hierarchical Indexing for Retrieval-Augmented Opinion Summarization. *Transactions of the Association for Computational Linguistics, 12*, 1533–1555. [DOI: 10.1162/tacl_a_00703](https://doi.org/10.1162/tacl_a_00703).
 
-**P05.** Gutiérrez-Fandiño, A., Armengol-Estapé, J., Pàmies, M., Llop-Palao, J., Silveira-Ocampo, J., Carrino, C. P., Armentano-Oller, C., Rodríguez-Penagos, C., Gonzalez-Agirre, A., & Villegas, M. (2022). MarIA: Spanish Language Models. *Procesamiento del Lenguaje Natural, 68*, 39–60. [DOI: 10.26342/2022-68-3](https://doi.org/10.26342/2022-68-3).
+**R10.** Ma, Q., Ren, X., & Huang, C. (2024). XRec: Large Language Models for Explainable Recommendation. *Findings of the Association for Computational Linguistics: EMNLP 2024*, 391–402. [DOI: 10.18653/v1/2024.findings-emnlp.22](https://doi.org/10.18653/v1/2024.findings-emnlp.22).
 
-**P06.** Xue, Y., & Liu, H. (2023). Exploration of the Dynamic Evolution of Online Public Opinion towards Waste Classification in Shanghai. *International Journal of Environmental Research and Public Health, 20*(2), 1471. [DOI: 10.3390/ijerph20021471](https://doi.org/10.3390/ijerph20021471).
+**R11.** Wu, L., Zheng, Z., Qiu, Z., Wang, H., Gu, H., Shen, T., Qin, C., Zhu, C., Zhu, H., Liu, Q., Xiong, H., & Chen, E. (2024). A Survey on Large Language Models for Recommendation. *World Wide Web, 27*, Article 60. [DOI: 10.1007/s11280-024-01291-2](https://doi.org/10.1007/s11280-024-01291-2).
 
-**P07.** Mao, Y., Liu, Q., & Zhang, Y. (2024). Sentiment analysis methods, applications, and challenges: A systematic literature review. *Journal of King Saud University – Computer and Information Sciences, 36*(4), 102048. [DOI: 10.1016/j.jksuci.2024.102048](https://doi.org/10.1016/j.jksuci.2024.102048).
+**R12.** Roumeliotis, K. I., Margaris, D., Spiliotopoulos, D., & Vassilakis, C. (2026). A Large-Scale Empirical Study of LLM Orchestration and Ensemble Strategies for Sentiment Analysis in Recommender Systems. *Future Internet, 18*(2), 112. [DOI: 10.3390/fi18020112](https://doi.org/10.3390/fi18020112).
 
-**P08.** Sui, F., & Zhang, H. (2024). How to go green? Exploring public attention and sentiment towards waste sorting behaviors on Weibo platform: A study based on text co-occurrence networks and deep learning. *Heliyon, 10*(19), e38510. [DOI: 10.1016/j.heliyon.2024.e38510](https://doi.org/10.1016/j.heliyon.2024.e38510).
+## Control de versiones y uso en el PPI
 
-**P09.** Huang, H., Zeng, X., Ge, L., & Sun, K. (2025). Social media engagement in waste sorting: the role of sentiment in shaping public awareness. *Humanities and Social Sciences Communications, 12*, 1763. [DOI: 10.1057/s41599-025-06041-x](https://doi.org/10.1057/s41599-025-06041-x).
-
-**P10.** Calizaya-Milla, S. E., Santos, J., & Huanca Torres, F. A. (2026). Fine-Tuning Monolingual Pre-Trained BERT Models for Sentiment Analysis in Peruvian Slang Contexts. *Applied Artificial Intelligence, 40*(1), 2641381. [DOI: 10.1080/08839514.2026.2641381](https://doi.org/10.1080/08839514.2026.2641381).
-
-**P11.** Chen, L., Huang, L., Ma, W., Ma, S., & Li, Y. (2025). The study on the dissemination of waste sorting policies on social media and the public’s feedback attitudes: a text analysis based on comment data of policies in 46 key cities in China. *Frontiers in Environmental Science, 13*, 1546136. [DOI: 10.3389/fenvs.2025.1546136](https://doi.org/10.3389/fenvs.2025.1546136).
-
-Las fuentes bibliométricas están en [criterios_calidad.md](evidencias/busqueda/criterios_calidad.md). Los candidatos no incluidos están en el registro de búsqueda y no se contabilizan como estudios sintetizados. Las fuentes originales sustituyen la atribución indirecta a los borradores para los trabajos aquí verificados.
-
-
+La matriz, taxonomía y criterios respaldan E8 y E9. El título, problema, objetivos y categorías deben conservar una misma delimitación al incorporarse al PPI. El corpus puede ampliarse si un cribado formal posterior identifica publicaciones elegibles adicionales.
