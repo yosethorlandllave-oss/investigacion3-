@@ -2,9 +2,12 @@
 
 **Título de la investigación:** Análisis de Sentimientos con Modelos de Lenguaje para Sistemas de Recomendación: Una Revisión Sistemática de la Literatura
 
-**Autor:** Yoseth Orlando Llave Huachaca  
-**Curso:** Investigación III — Universidad Peruana Unión  
-**Fecha:** 1 de noviembre de 2026  
+**Autor:** Yoseth Orlando Llave Huachaca
+
+**Curso:** Investigación III — Universidad Peruana Unión
+
+**Fecha:** 1 de noviembre de 2026
+
 **Estado:** formulación del problema de revisión, para integrar al PPI.
 
 ## E1. Tema de investigación
